@@ -22,10 +22,10 @@
 # 팀원
 |이름|포지션|깃허브 주소|
 |------|---|-----|
-|정다희(팀장)|Front-end|[Git hub][정다희주소]|
-|서진석(팀원)|Front-end|[Git hub][서진석주소]|
-|배윤호(팀원)|Back-end|[Git hub][배윤호주소]|
-|정무공(팀원)|Back-end|[Git hub][정무공주소]|
+|정다희(팀장)|back-end|[Git hub][정다희주소]|
+|서진석(팀원)|back-end|[Git hub][서진석주소]|
+|배윤호(팀원)|front-end|[Git hub][배윤호주소]|
+|정무공(팀원)|front-end|[Git hub][정무공주소]|
 
 [정다희주소]:https://github.com/sowookim
 [서진석주소]:https://github.com/realsonya7
