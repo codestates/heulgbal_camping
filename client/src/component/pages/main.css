@@ -1,0 +1,82 @@
+* {
+  background-color: white;
+}
+
+.first {
+  padding: 1em;
+}
+
+div {
+  background-color: white;
+}
+
+.border {
+  padding: 2em;
+}
+
+button {
+  border-color: bisque;
+  background-color: bisque;
+}
+
+.mainb {
+  width: 9em;
+  height: 4em;
+}
+
+.serchb {
+  margin-left: 26em;
+  margin-right: 1.5em;
+  height: 4em;
+  width: 7.5em;
+}
+
+.profileb {
+  height: 4em;
+  width: 7.5em;
+  margin-right: 0em;
+}
+
+.benner {
+  width: 50em;
+  height: 30em;
+  margin: 2em 2em 2em 2em;
+  border: 2px solid yellowgreen;
+}
+
+.serchbox {
+  border: 2px solid yellowgreen;
+  margin: 0em 4em 0em 4em;
+  width: 100em;
+}
+
+.settingbox {
+  margin: 1em 1.5em;
+  height: 4em;
+  width: 8em;
+}
+
+.settingbox2 {
+  margin-left: 1.5em;
+  height: 4em;
+  width: 14em;
+}
+
+.introduce {
+  width: 50em;
+  height: 6em;
+  margin: 2.5em 2em 1.5em 2em;
+  border: 2px solid yellowgreen;
+}
+
+.camplist {
+  margin-top: 0em;
+  padding-top: 2.5em;
+  height: 4em;
+  border-bottom: 2px solid yellowgreen;
+  background-color: bisque;
+}
+.text {
+  text-align: center;
+  font-size: 2em;
+}
