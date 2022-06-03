@@ -5,6 +5,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const express = require('express');
 const app = express();
+const { sequelize } = require('./models');
 
 const controllers = require('./Controllers/Index');
 
@@ -17,6 +18,15 @@ app.use(
     methods: ['GET', 'POST', 'OPTIONS', 'DELETE', 'PATCH'],
   }),
 );
+// 시퀄라이즈
+sequelize
+  .sync({ force: false })
+  .then(() => {
+    console.log('데이터베이스 연결됨.');
+  })
+  .catch(err => {
+    console.error(err);
+  });
 
 app.get('/', (req, res) => {
   res.status(201).send('Hello World');
