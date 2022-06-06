@@ -8,22 +8,24 @@ const {
 const { user } = require("../../models");
 
 module.exports = async (req, res) => {
-  const { customer_id, password } = req.body;
+  const { business_number, password } = req.body;
   
-  const userInfo = await user.findOne({where: {customer_id, password}});
+  const userInfo = await user.findOne({where: {business_number, password}});
 
   // 입력받은 정보가 데이터베이스에 있는 정보와 일치 하지 않을 경우
   if (!userInfo) return res.status(401).send("id or password is not authorized")
   // 로그인 성공시 쿠키로 JWT 토큰 전달
   else {
     const data = {
-    customer_id: userInfo.dataValues.customer_id,
+    business_number: userInfo.dataValues.business_number,
     password: userInfo.dataValues.password,
     name: userInfo.dataValues.name,
     email: userInfo.dataValues.email,
     phone: userInfo.dataValues.phone,
+    business_name: userInfo.dataValues.business_name,
+    business_address: userInfo.datavalues.business_address,
     email_authrization: userInfo.dataValues.email_authrization,
-    type: userInfo.datavalues.type,
+    type: userInfo.dataValues.type,
     };
 
     const accessToken = generateAccessToken(data);
