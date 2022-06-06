@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Main from './component/pages/main';
-import MyPage from './component/pages/mypage';
+import Main from "./component/pages/main";
+import MyPage from "./component/pages/mypage";
 
 const App = () => {
   return (
@@ -17,9 +17,9 @@ const App = () => {
                 <Route path="/mypage" element={<MyPage />} />
               </Routes>
             </section>
-          </main> 
+          </main>
         </div>
-        </BrowserRouter>
+      </BrowserRouter>
     </div>
   );
 };
