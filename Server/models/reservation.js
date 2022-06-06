@@ -2,11 +2,6 @@
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class reservation extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       models.reservation.belongsTo(models.user, {
         foreignKey: 'customer_id',
@@ -31,7 +26,6 @@ module.exports = (sequelize, DataTypes) => {
       room_id: DataTypes.INTEGER,
       option_quantity: DataTypes.INTEGER,
       people_count: DataTypes.INTEGER,
-      customer_id: DataTypes.INTEGER,
       room_approval_state: {
         type: DataTypes.STRING(8),
         defaultValue: 'waiting',

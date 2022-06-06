@@ -18,7 +18,7 @@ app.use(
     methods: ['GET', 'POST', 'OPTIONS', 'DELETE', 'PATCH'],
   }),
 );
-// 시퀄라이즈
+
 sequelize
   .sync({ force: false })
   .then(() => {
