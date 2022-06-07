@@ -5,7 +5,7 @@ const {
   sendRefreshToken,
 } = require("../TokenFunction");
 
-const { user } = require("../../models");
+const { user } = require("../../models/users");
 
 module.exports = async (req, res) => {
   const { business_number, password } = req.body;

@@ -36,7 +36,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       email_authorization: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

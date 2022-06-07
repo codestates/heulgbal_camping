@@ -1,4 +1,4 @@
-const { user } = requrie("../../models");
+const { user } = requrie("../../models/users");
 const { isAuthorized } = require("../TokenFunction");
 
 module.exports = async (req, res) => {

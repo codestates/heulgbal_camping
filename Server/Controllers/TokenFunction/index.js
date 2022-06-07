@@ -19,8 +19,12 @@ module.exports = {
   },
   isAuthorized: (req) => {
     const authorization = req.cookies.jwt;
+    if(!authorization) {
+      return null;
+    }
+    const token = authorization.split(' ')[1];
     try {
-      return verify(authorization, process.env.ACCESS_SECRET);
+      return verify(token, process.env.ACCESS_SECRET);
     } catch(error) { return null; }
   }
 };

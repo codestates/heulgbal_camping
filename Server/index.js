@@ -4,28 +4,35 @@ const https = require('https');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const express = require('express');
-const app = express();
 
-const controllers = require('./Controllers/Index');
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: true,
+    origin: ['http://localhost:3000'],
     credentials: true,
     methods: ['GET', 'POST', 'OPTIONS', 'DELETE', 'PATCH'],
   }),
 );
 
 app.get('/', (req, res) => {
-  res.status(201).send('Hello World');
+  res.status(201).send('HEULGBAL CAMPING!');
 });
 
-app.use(cookieParser());
-app.post('/signup', controllers.signup);
+// routers declaration
 
-const HTTPS_PORT = process.env.HTTPS_PORT || 4000;
+const { UserBusinessRouter } = require('./Routes/UserBusiness');
+
+// express use routers
+
+app.use('/business', UserBusinessRouter);
+
+app.use(cookieParser());
+app.use()
+
+const HTTPS_PORT = process.env.HTTPS_PORT || 3000;
 
 // 인증서 파일들이 존재하는 경우에만 https 프로토콜을 사용하는 서버를 실행합니다.
 // 만약 인증서 파일이 존재하지 않는경우, http 프로토콜을 사용하는 서버를 실행합니다.

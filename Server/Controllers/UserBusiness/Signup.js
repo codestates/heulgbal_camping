@@ -1,4 +1,4 @@
-const { user } = require('../../models');
+const { user } = require('../../models/users');
 const { generateAccessToken } = require('../TokenFunctions');
 
 module.exports = async (req, res) => {
@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
   // id 값과 이메일이 중복되면, 회원가입 거절
   const [ userInfo, created ] = await user.findOrCreate({
     where: { business_number, email },
-    defaults: { customer_id, password, email, name, phone }
+    defaults: { business_number, password, email, name, phone }
   });
   // 새로 들어온 데이터라면 created = true
   // 데이터베이스에 존재하는 정보라면 회원가입 거절(id 기준)

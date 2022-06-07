@@ -1,27 +1,27 @@
 // url별 분기
 module.exports = {
   // default 
-  campsite: require('./campsites'),
-  roomList: require('./campsites/{id}/rooms'),
-  reservation: require('./campsites/{id}/rooms/{id}/reservation'),
+  campsite: require('./Campsites/CampsiteList'),
+  roomList: require('./Campsites/RoomList'),
+  reservation: require('./Campsites/Reservation'),
 
 
   // related with user_customer
-  login: require('./user/login'),
-  signup: require('./user/signup'),
-  mypage: require('./user/{id}'),
-  infoChange: require('./user/{id}/information'),
-  passwordChange: require('./user/{id}/password'),
-  reservationCheck: require('./user{id}/reservations'),
-  withdrawal: require('./user/{id}/withdrawl'),
+  login: require('./UserCustomer/Login'),
+  logout: require('./UserCustomer/Logout'),
+  signup: require('./UserCustmoer/Signup'),
+  infoChange: require('./UserCustmoer/InformationChanging'),
+  passwordChange: require('./UserCustmoer/PasswordChanging'),
+  reservationCheck: require('./UserCustomer/ReservationCheck'),
+  withdrawal: require('./UserCustmoer/Withdrawal'),
 
   //related with user_business
-  loginBusiness: require('./business/login'),
-  signupBusiness: require('./business/signup'),
-  mypageBusiness: require('./business/{id}'),
-  infoChangeBusiness: require('./business/{id}/information'),
-  passwordChangeBusiness: require('./business/{id}/password'),
-  reservationCheckBusiness: require('./business/{id}/reservations'),
-  withdrawalBusiness: require('./business/{id}/withdrawal')
+  loginBusiness: require('./UserBusiness/Login'),
+  logoutBusiness: require('./UserBusiness/Logout'),
+  signupBusiness: require('./UserBusiness/Signup'),
+  infoChangeBusiness: require('./UserBusiness/InformationChanging'),
+  passwordChangeBusiness: require('./UserBusiness/PasswordChanging'),
+  // reservationCheckBusiness: require('./UserBusiness/ReservationListCheck'),
+  withdrawalBusiness: require('./UserBusiness/Withdrawal')
 
 };
