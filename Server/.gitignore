@@ -1,0 +1,10 @@
+# environment variable
+.env
+
+#dependencies
+/node_modules
+
+#misc
+
+#config
+/config/config.js
