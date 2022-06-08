@@ -2,9 +2,9 @@
 .env
 
 #dependencies
-./node_modules
+/node_modules
 
 #misc
 
 #config
-/config
+/config/config.js

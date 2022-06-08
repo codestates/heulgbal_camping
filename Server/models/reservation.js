@@ -9,10 +9,6 @@ module.exports = (sequelize, DataTypes) => {
         onDelete: 'cascade',
         onUpdate: 'cascade',
       });
-      models.reservation.hasMany(models.option, {
-        foreignKey: 'reservation_id',
-        sourceKey: 'id',
-      });
       models.reservation.belongsTo(models.room, {
         foreignKey: 'room_id',
         targetKey: 'id',

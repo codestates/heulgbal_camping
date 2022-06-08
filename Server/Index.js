@@ -20,7 +20,7 @@ app.use(
 );
 
 sequelize
-  .sync({ force: false })
+  .sync({ force: true })
   .then(() => {
     console.log('데이터베이스 연결됨.');
   })
@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(cookieParser());
-app.post('/signup', controllers.signup);
+app.use('/', controllers);
 
 const HTTPS_PORT = process.env.HTTPS_PORT || 4000;
 

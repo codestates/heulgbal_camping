@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
   campsite_images.init(
     {
       image_url: DataTypes.TEXT,
-      campsited_id: DataTypes.INTEGER,
       campsite_id: DataTypes.INTEGER,
     },
     {
