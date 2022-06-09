@@ -1,0 +1,83 @@
+.mybutton {
+  border-color: bisque;
+  background-color: bisque;
+}
+
+.mymainb {
+  width: 9em;
+  height: 4em;
+  margin-left: 0.5em;
+}
+
+.myprofileb {
+  height: 4em;
+  width: 7.5em;
+  margin-left: 38em;
+}
+
+.mytext {
+  text-align: center;
+  font-size: 2em;
+}
+
+.myborder {
+  border: 2px solid bisque;
+  margin: 2em 2em;
+  padding: 1em;
+}
+
+.mymainbox {
+  margin: 2em 2em 0em 2em ;
+  border: 2px solid bisque;
+}
+
+.mysidebar {
+  width: 20em;
+  margin-top: 0em;
+  float: left;
+}
+
+.mysidebutton {
+  width: 7em;
+  height: 3em;
+  font-size: 2em;
+  margin: 1.4em;
+}
+
+.mypageinput {
+  width: 90em;
+  display: inline-block;
+  border-left: 2px solid bisque;
+  text-align: center;
+  height: 48em;
+}
+
+.mypagesignout {
+  font-size: 5em;
+  margin: 2em 2em 0.5em 2em;
+  height: auto;
+}
+
+.inputbox {
+  width: 20em;
+  height: 3.5em;
+  margin: 0em 0em 2em 5em;
+}
+
+.signooutb {
+  margin: auto;
+  height: 3em;
+  width: 5em;
+  font-size: 0.5em;
+}
+
+.mycampmainbox {
+  height: 80em;
+}
+
+.signoutinput {
+  margin-top: 1em;
+  margin-bottom: 8em;
+  height: 3em;
+  width: 20em;
+}
