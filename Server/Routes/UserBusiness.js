@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { UserBusinessController } = require('../Controllers');
+const { UserBusinessController } = require('../Controllers/index');
 
 router.get('/logout', UserBusinessController.logoutBusiness);
 router.post('/login', UserBusinessController.loginBusiness);

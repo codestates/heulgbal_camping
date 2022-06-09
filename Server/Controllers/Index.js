@@ -9,11 +9,11 @@ module.exports = {
   // related with user_customer
   login: require('./UserCustomer/Login'),
   logout: require('./UserCustomer/Logout'),
-  signup: require('./UserCustmoer/Signup'),
-  infoChange: require('./UserCustmoer/InformationChanging'),
-  passwordChange: require('./UserCustmoer/PasswordChanging'),
-  reservationCheck: require('./UserCustomer/ReservationCheck'),
-  withdrawal: require('./UserCustmoer/Withdrawal'),
+  signup: require('./UserCustomer/Signup'),
+  infoChange: require('./UserCustomer/InformationChanging'),
+  passwordChange: require('./UserCustomer/PasswordChanging'),
+  // reservationCheck: require('./UserCustomer/ReservationCheck'),
+  withdrawal: require('./UserCustomer/Withdrawal'),
 
   //related with user_business
   loginBusiness: require('./UserBusiness/Login'),
