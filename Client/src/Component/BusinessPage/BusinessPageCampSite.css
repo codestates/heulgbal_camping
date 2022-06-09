@@ -1,0 +1,67 @@
+.business-button {
+  border-color: bisque;
+  background-color: bisque;
+}
+
+.business-main-button {
+  width: 9em;
+  height: 4em;
+  margin-left: 0.5em;
+}
+
+.business-profile-button {
+  height: 4em;
+  width: 7.5em;
+  margin-left: 38em;
+}
+
+.business-text {
+  text-align: center;
+  font-size: 2em;
+}
+
+.business-border {
+  border: 2px solid bisque;
+  margin: 2em 2em;
+  padding: 1em;
+}
+
+.business-main-box {
+  margin: 2em 2em 0em 2em ;
+  border: 2px solid bisque;
+}
+
+.business-sidebar {
+  width: 20em;
+  margin-top: 0em;
+  float: left;
+}
+
+.business-side-button {
+  width: 7em;
+  height: 3em;
+  font-size: 2em;
+  margin: 1.4em;
+}
+
+.business-page-input {
+  width: 90em;
+  display: inline-block;
+  border-left: 2px solid bisque;
+}
+
+.business-camp-input-text {
+  font-size: 2em;
+  margin: 2em 2em 0.5em 2em;
+  height: 30em;
+}
+
+.business-password-button {
+  margin: 1em 0em 1.5em 31em;
+  border-left: 2px solid bisque;
+}
+
+.business-page-edit-button {
+  margin-left: 2em;
+}
+
