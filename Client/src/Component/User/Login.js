@@ -10,6 +10,10 @@ const Wallpaper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  background: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmYtcW%2FbtrEhpnNT3P%2FmKrwAndM9av5aKOkbTWK2K%2Fimg.jpg"),
+    linear-gradient(to right bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 const Wraper = styled.div`
@@ -18,7 +22,7 @@ const Wraper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.15);
   background-size: cover;
   background-repeat: no-repeat;
 `;
@@ -118,12 +122,13 @@ export function Login ({ handleResponseSuccess }) {
     if (userInfo.password === loginInfo.password) {
       window.location.replace("/")
       console.log('넬라굿')
-      
     }
+
     else {
       console.log("노굿")
       // console.log(userInfo)
     }
+    
   }
 
   return (

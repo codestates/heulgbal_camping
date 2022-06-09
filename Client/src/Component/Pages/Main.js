@@ -1,11 +1,13 @@
-//메인페이지
+import { useState } from 'react';
 import React from 'react';
 import './Main.css'
-//import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import MyModal from '../Model/ProFileModel';
 
 const Main = () => {
-  function handleClick(e) {
-    window.location.href = "/login"
+  const [isOpen, setOpen] = useState(false)
+
+  const handleClick1 = () => {
+    setOpen(true)
   }
 
   function introduceClick(e) {
@@ -21,7 +23,11 @@ const Main = () => {
     <span className='border'>
         <button className='mainb text'>흙발캠핑</button>
         <button className='serchb text'>검색</button>
-        <button className='profileb text' onClick={handleClick}>프로필</button>
+        <button className='profileb text' onClick={handleClick1}>프로필</button>
+        <MyModal 
+        isOpen={isOpen}
+        onRequestClose={() => setOpen(false)}
+        />
       </span>
     <div className='benner text'>
       배너 사진
