@@ -1,27 +1,36 @@
+// const express = require('express');
+// const router = express.Router();
+
 // url별 분기
 module.exports = {
   // default 
-  campsite: require('./Campsites/CampsiteList'),
-  roomList: require('./Campsites/RoomList'),
-  reservation: require('./Campsites/Reservation'),
+  campsite: require('../Controllers/Campsites/CampsiteList'),
+  roomList: require('../Controllers/Campsites/RoomList'),
+  reservation: require('../Controllers/Campsites/Reservation'),
 
 
   // related with user_customer
-  login: require('./UserCustomer/Login'),
-  logout: require('./UserCustomer/Logout'),
-  signup: require('./UserCustomer/Signup'),
-  infoChange: require('./UserCustomer/InformationChanging'),
-  passwordChange: require('./UserCustomer/PasswordChanging'),
-  // reservationCheck: require('./UserCustomer/ReservationCheck'),
-  withdrawal: require('./UserCustomer/Withdrawal'),
+  login: require('../Controllers/UserCustomer/Login'),
+  logout: require('../Controllers/UserCustomer/Logout'),
+  signup: require('../Controllers/UserCustomer/Signup'),
+  infoChange: require('../Controllers/UserCustomer/InformationChanging'),
+  passwordChange: require('../Controllers/UserCustomer/PasswordChanging'),
+  // reservationCheck: require('../Controllers/UserCustomer/ReservationCheck'),
+  withdrawal: require('../Controllers/UserCustomer/Withdrawal'),
 
   //related with user_business
-  loginBusiness: require('./UserBusiness/Login'),
-  logoutBusiness: require('./UserBusiness/Logout'),
-  signupBusiness: require('./UserBusiness/Signup'),
-  infoChangeBusiness: require('./UserBusiness/InformationChanging'),
-  passwordChangeBusiness: require('./UserBusiness/PasswordChanging'),
-  // reservationCheckBusiness: require('./UserBusiness/ReservationListCheck'),
-  withdrawalBusiness: require('./UserBusiness/Withdrawal')
-
+  loginBusiness: require('../Controllers/UserBusiness/Login'),
+  logoutBusiness: require('../Controllers/UserBusiness/Logout'),
+  signupBusiness: require('../Controllers/UserBusiness/Signup'),
+  infoChangeBusiness: require('../Controllers/UserBusiness/InformationChanging'),
+  passwordChangeBusiness: require('../Controllers/UserBusiness/PasswordChanging'),
+  // reservationCheckBusiness: require('../Controllers/UserBusiness/ReservationListCheck'),
+  withdrawalBusiness: require('../Controllers/UserBusiness/Withdrawal')
 };
+
+// router.use('/logout', loginBusiness);
+// router.use('/login', logoutBusiness);
+// router.use('/signup', signupBusiness);
+// router.use('/:id/information', infoChangeBusiness);
+// router.use('/:id/password', passwordChangeBusiness);
+// router.use('/:id/withdrawal', withdrawalBusiness);

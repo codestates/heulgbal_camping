@@ -1,5 +1,5 @@
 const { user } = require('../../models/users');
-const { generateAccessToken } = require('../TokenFunctions');
+const { generateAccessToken } = require('../TokenFunction');
 
 module.exports = async (req, res) => {
   // customer user 회원가입

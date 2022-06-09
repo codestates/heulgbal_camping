@@ -1,10 +1,10 @@
-const { user } = requrie("../../models");
-const { isAuthorized } = require("../TokenFunction");
+const { user } = require('../../models/users');
+const { isAuthorized } = require('../TokenFunction');
 
 module.exports = async (req, res) => {
   const userInfo = isAuthorized(req);
   if (!userInfo) {
-    res.status(401).send("something is not authorized");
+    res.status(401).send('something is not authorized');
   };
   const { name, phone, email, business_address, business_name } = req.body;
 

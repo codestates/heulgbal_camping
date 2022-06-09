@@ -1,4 +1,4 @@
-const { deleteRefreshToken, isAuthorized } = require("../TokenFunction");
+const { deleteRefreshToken, isAuthorized } = require('../TokenFunction');
 
 module.exports = (req, res) => {
   const tokenData = isAuthorized(req);
