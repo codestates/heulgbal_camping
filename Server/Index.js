@@ -20,7 +20,7 @@ app.use(
 );
 
 sequelize
-  .sync({ force: true })
+  .sync({ force: false })
   .then(() => {
     console.log('데이터베이스 연결됨.');
   })
@@ -28,14 +28,12 @@ sequelize
     console.error(err);
   });
 
-app.get('/', (req, res) => {
-  res.status(201).send('Hello World');
-});
-
 app.use(cookieParser());
 app.use('/', controllers);
-
-const HTTPS_PORT = process.env.HTTPS_PORT || 4000;
+app.get('/', (req, res) => {
+  res.status(200).send('Hello World');
+});
+const HTTPS_PORT = process.env.HTTPS_PORT || 80;
 
 let server;
 if (fs.existsSync('./key.pem') && fs.existsSync('./cert.pem')) {
@@ -44,6 +42,8 @@ if (fs.existsSync('./key.pem') && fs.existsSync('./cert.pem')) {
   const credentials = { key: privateKey, cert: certificate };
 
   server = https.createServer(credentials, app);
+  server.keepAliveTimeout = 65000;
+  server.headersTimeout = 66000;
   server.listen(HTTPS_PORT, () =>
     console.log(HTTPS_PORT, 'https server runnning'),
   );
