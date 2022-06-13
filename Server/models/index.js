@@ -7,6 +7,8 @@ const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.js')[env];
 const db = {};
+const Users = require('./users');
+const Reservations = require('./reservations');
 
 let sequelize;
 if (config.use_env_variable) {
@@ -14,6 +16,7 @@ if (config.use_env_variable) {
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
+
 
 fs
   .readdirSync(__dirname)
@@ -31,7 +34,13 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+Users.init(sequelize);
+Reservations.init(sequelize);
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+Users.associate(db);
+Reservations.associate(db);
 
 module.exports = db;
