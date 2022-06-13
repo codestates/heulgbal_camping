@@ -4,14 +4,17 @@ import './QnAPage.css'
 //import { BrowserRouter,Route,Routes } from 'react-router-dom';
 
 const Main = () => {
-  function handleClick(e) {
-    window.location.href = "/login"
-  }
+  // function handleClick(e) {
+  //   window.location.href = "/login"
+  // }
+
+
+
   return (
   <div>
     <div className='qna-border'>
       <button className='qna-main-button qna-button qna-text'>흙발캠핑</button>
-      <button className='qna-profile-button qna-button qna-text' onClick={handleClick}>프로필</button>
+      <button className='qna-profile-button qna-button qna-text'>프로필</button>
     </div>
     <div className='qna-area'>
       <div className='qna-text qna-shadow'>자주 묻는 질문</div>

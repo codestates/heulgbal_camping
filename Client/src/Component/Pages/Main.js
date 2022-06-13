@@ -10,13 +10,14 @@ const Main = () => {
     setOpen(true)
   }
 
-  function introduceClick(e) {
+  const introduceClick = () => {
     window.location.href = "/introduce"
   }
 
-  function serchClick(e) {
+  const serchClick = () => {
     window.location.href = "/serch"
   }
+
   return (
   <div className='first'>
     

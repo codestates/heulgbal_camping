@@ -5,6 +5,8 @@ import Login from './Component/User/Login';
 import SignUp from './Component/User/SignUp';
 import SerchMain from './Component/SerchPage/SerchMain';
 import GuidePage from './Component/Pages/GuidePage';
+// import button from './Component/User/button'
+// import SignIn from './Component/User/SignIn';
 
 const App = () => {
   return (
