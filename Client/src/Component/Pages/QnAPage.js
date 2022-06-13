@@ -4,16 +4,15 @@ import './QnAPage.css'
 //import { BrowserRouter,Route,Routes } from 'react-router-dom';
 
 const Main = () => {
-  // function handleClick(e) {
-  //   window.location.href = "/login"
-  // }
 
-
-
+  const mainClick = (e) => {
+    window.location.href = "/"
+  }
+  
   return (
   <div>
     <div className='qna-border'>
-      <button className='qna-main-button qna-button qna-text'>흙발캠핑</button>
+      <button className='qna-main-button qna-button qna-text' onClick={mainClick}>흙발캠핑</button>
       <button className='qna-profile-button qna-button qna-text'>프로필</button>
     </div>
     <div className='qna-area'>
@@ -22,7 +21,7 @@ const Main = () => {
     </div>
     <div className='qna-area'>
       <div className='qna-text qna-shadow'>입점문의 및 고객센터 연락처</div>
-      <div className='qna-text qna-input'>들어갈 내용</div>
+      <div className='qna-text qna-input'>입점문의</div>
     </div>
   </div>
   );
