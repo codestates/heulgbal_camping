@@ -17,6 +17,7 @@ const Main = () => {
   function serchClick(e) {
     window.location.href = "/serch"
   }
+
   return (
   <div className='first'>
     
