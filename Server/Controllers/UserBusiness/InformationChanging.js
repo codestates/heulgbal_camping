@@ -8,6 +8,7 @@ module.exports = async (req, res) => {
   };
   const { name, phone, email, business_address, business_name } = req.body;
 
+
   await user.update({
     name, 
     phone,

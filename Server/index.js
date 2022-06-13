@@ -23,11 +23,15 @@ app.get('/', (req, res) => {
 
 // routers declaration
 
-const  UserBusinessRouter  = require('./Routes/UserBusiness');
+const UserBusinessRouter  = require('./Routes/UserBusiness');
+const UserCustomerRouter = require('./Routes/UserCustomer');
+// const CampsitesRouter = require('/Routes/Campsites);
 
 // express use routers
 
 app.use('/business', UserBusinessRouter);
+app.use('/user', UserCustomerRouter);
+// app.use('/campsites', CampsitesRouter);
 
 // app.use(cookieParser());
 // app.use()

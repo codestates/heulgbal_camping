@@ -15,7 +15,7 @@ module.exports = {
   signup: require('../Controllers/UserCustomer/Signup'),
   infoChange: require('../Controllers/UserCustomer/InformationChanging'),
   passwordChange: require('../Controllers/UserCustomer/PasswordChanging'),
-  // reservationCheck: require('../Controllers/UserCustomer/ReservationCheck'),
+  reservationCheck: require('../Controllers/UserCustomer/ReservationCheck'),
   withdrawal: require('../Controllers/UserCustomer/Withdrawal'),
 
   //related with user_business
@@ -24,7 +24,7 @@ module.exports = {
   signupBusiness: require('../Controllers/UserBusiness/Signup'),
   infoChangeBusiness: require('../Controllers/UserBusiness/InformationChanging'),
   passwordChangeBusiness: require('../Controllers/UserBusiness/PasswordChanging'),
-  // reservationCheckBusiness: require('../Controllers/UserBusiness/ReservationListCheck'),
+  reservationCheckBusiness: require('../Controllers/UserBusiness/ReservationListCheck'),
   withdrawalBusiness: require('../Controllers/UserBusiness/Withdrawal')
 };
 
