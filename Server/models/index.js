@@ -34,13 +34,8 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
-Users.init(sequelize);
-Reservations.init(sequelize);
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
-Users.associate(db);
-Reservations.associate(db);
 
 module.exports = db;

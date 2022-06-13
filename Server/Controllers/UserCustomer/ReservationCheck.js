@@ -18,4 +18,13 @@ module.exports = {
     });
     res.status(200).json(result);
   },
-}
+  cancel: async (req, res) => {
+    const userInfo = isAuthorized(req);
+    // 예약을 취소 할 경우, 데이터 삭제
+    await reservation.destroy({
+      where: {
+        customer_id: userInfo.customer_id
+      }
+    });
+  }
+};
