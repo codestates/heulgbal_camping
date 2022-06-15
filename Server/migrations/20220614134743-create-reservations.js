@@ -8,16 +8,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      room__id: {
+      room_id: {
         type: Sequelize.INTEGER
       },
       option_quantity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.JSON
       },
       people_count: {
         type: Sequelize.INTEGER
       },
       customer_id: {
+        type: Sequelize.STRING
+      },
+      business_number: {
         type: Sequelize.INTEGER
       },
       room_approval_state: {
