@@ -1,61 +1,102 @@
+<<<<<<< HEAD
 .mybutton {
+=======
+.my-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   border-color: bisque;
   background-color: bisque;
 }
 
+<<<<<<< HEAD
 .mymainb {
+=======
+.my-main-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   width: 9em;
   height: 4em;
   margin-left: 0.5em;
 }
 
+<<<<<<< HEAD
 .myprofileb {
+=======
+.my-profile-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   height: 4em;
   width: 7.5em;
   margin-left: 38em;
 }
 
+<<<<<<< HEAD
 .mytext {
+=======
+.my-text {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   text-align: center;
   font-size: 2em;
 }
 
+<<<<<<< HEAD
 .myborder {
+=======
+.my-border {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   border: 2px solid bisque;
   margin: 2em 2em;
   padding: 1em;
 }
 
+<<<<<<< HEAD
 .mymainbox {
+=======
+.my-main-box {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   margin: 2em 2em 0em 2em ;
   border: 2px solid bisque;
 }
 
+<<<<<<< HEAD
 .mysidebar {
+=======
+.my-sidebar {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   width: 20em;
   margin-top: 0em;
   float: left;
 }
 
+<<<<<<< HEAD
 .mysidebutton {
+=======
+.my-side-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   width: 7em;
   height: 3em;
   font-size: 2em;
   margin: 1.4em;
 }
 
+<<<<<<< HEAD
 .mypageinput {
+=======
+.my-page-input {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   width: 90em;
   display: inline-block;
   border-left: 2px solid bisque;
 }
 
+<<<<<<< HEAD
 .mycampinputtext {
+=======
+.my-camp-input-text {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   font-size: 2em;
   margin: 2em 2em 0.5em 2em;
   height: 30em;
 }
 
+<<<<<<< HEAD
 .inputbox {
   width: 20em;
   height: 3.5em;
@@ -63,10 +104,14 @@
 }
 
 .passwordb {
+=======
+.password-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   margin: 1em 0em 1.5em 31em;
   border-left: 2px solid bisque;
 }
 
+<<<<<<< HEAD
 .pageeditb {
   margin-left: 2em;
 }
@@ -74,3 +119,9 @@
 .mycampmainbox {
   height: 80em;
 }
+=======
+.page-edit-button {
+  margin-left: 2em;
+}
+
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b

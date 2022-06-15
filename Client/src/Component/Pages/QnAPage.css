@@ -1,0 +1,52 @@
+.qna-button {
+  border-color: bisque;
+  background-color: bisque;
+}
+
+.qna-main-button {
+  width: 9em;
+  height: 4em;
+  margin-left: 0.5em;
+}
+
+.qna-profile-button {
+  height: 4em;
+  width: 9em;
+  margin-left: 37em;
+}
+
+.qna-text {
+  text-align: center;
+  font-size: 2em;
+}
+
+.qna-border {
+  border: 2px solid bisque;
+  margin: 2em 2em;
+  padding: 1em;
+}
+
+.qna-mainbox {
+  width: 57.5em;
+  margin: 2em 2em 5em 1em;
+  border: 2px solid bisque;
+  height: 1.5em;
+  padding-top: 1.5em;
+}
+
+.qna-shadow {
+  text-shadow: 2px 4px 2px yellowgreen;
+  color: bisque;
+  border-bottom: 2px solid bisque;
+  padding: 2em;
+}
+
+.qna-area {
+  margin: 5em 2em;
+  border: 2px solid bisque;
+}
+
+.qna-input {
+  height: 25em;
+}
+

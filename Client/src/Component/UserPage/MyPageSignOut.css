@@ -1,50 +1,86 @@
+<<<<<<< HEAD
 .mybutton {
+=======
+.my-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   border-color: bisque;
   background-color: bisque;
 }
 
+<<<<<<< HEAD
 .mymainb {
+=======
+.my-main-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   width: 9em;
   height: 4em;
   margin-left: 0.5em;
 }
 
+<<<<<<< HEAD
 .myprofileb {
+=======
+.my-profile-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   height: 4em;
   width: 7.5em;
   margin-left: 38em;
 }
 
+<<<<<<< HEAD
 .mytext {
+=======
+.my-text {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   text-align: center;
   font-size: 2em;
 }
 
+<<<<<<< HEAD
 .myborder {
+=======
+.my-border {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   border: 2px solid bisque;
   margin: 2em 2em;
   padding: 1em;
 }
 
+<<<<<<< HEAD
 .mymainbox {
+=======
+.my-main-box {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   margin: 2em 2em 0em 2em ;
   border: 2px solid bisque;
 }
 
+<<<<<<< HEAD
 .mysidebar {
+=======
+.my-sidebar {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   width: 20em;
   margin-top: 0em;
   float: left;
 }
 
+<<<<<<< HEAD
 .mysidebutton {
+=======
+.my-side-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   width: 7em;
   height: 3em;
   font-size: 2em;
   margin: 1.4em;
 }
 
+<<<<<<< HEAD
 .mypageinput {
+=======
+.my-page-input {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   width: 90em;
   display: inline-block;
   border-left: 2px solid bisque;
@@ -52,30 +88,46 @@
   height: 48em;
 }
 
+<<<<<<< HEAD
 .mypagesignout {
+=======
+.my-page-signout {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   font-size: 5em;
   margin: 2em 2em 0.5em 2em;
   height: auto;
 }
 
+<<<<<<< HEAD
 .inputbox {
+=======
+.input-box {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   width: 20em;
   height: 3.5em;
   margin: 0em 0em 2em 5em;
 }
 
+<<<<<<< HEAD
 .signooutb {
+=======
+.sign-out-button {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   margin: auto;
   height: 3em;
   width: 5em;
   font-size: 0.5em;
 }
 
+<<<<<<< HEAD
 .mycampmainbox {
   height: 80em;
 }
 
 .signoutinput {
+=======
+.sign-out-input {
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   margin-top: 1em;
   margin-bottom: 8em;
   height: 3em;
