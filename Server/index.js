@@ -17,19 +17,29 @@ app.use(
   }),
 );
 
+app.use(cookieParser());
+
 app.get('/', (req, res) => {
   res.status(201).send('HEULGBAL CAMPING!');
 });
-
+app.get('/business', (req, res) => {
+  res.status(201).send('Business User Page')
+});
+app.get('/user', (req, res) => {
+  res.status(201).send('Customer User Page')
+});
 // routers declaration
 
-const  UserBusinessRouter  = require('./Routes/UserBusiness');
+const UserBusinessRouter  = require('./Routes/UserBusiness');
+const UserCustomerRouter = require('./Routes/UserCustomer');
+// const CampsitesRouter = require('/Routes/Campsites);
 
 // express use routers
 
 app.use('/business', UserBusinessRouter);
+app.use('/user', UserCustomerRouter);
+// app.use('/campsites', CampsitesRouter);
 
-// app.use(cookieParser());
 // app.use()
 
 const HTTPS_PORT = process.env.HTTPS_PORT || 4000;

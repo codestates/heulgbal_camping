@@ -157,4 +157,8 @@ export function Login ({ handleResponseSuccess }) {
   )
 }
 
+<<<<<<< HEAD
 export default Login
+=======
+export default Login
+>>>>>>> a781c7b78944132e931bd8fbdff67325398c384b

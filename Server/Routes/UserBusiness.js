@@ -7,8 +7,9 @@ router.post('/login', UserBusinessController.loginBusiness);
 router.post('/signup', UserBusinessController.signupBusiness);
 router.patch('/:id/information', UserBusinessController.infoChangeBusiness);
 router.patch('/:id/password', UserBusinessController.passwordChangeBusiness);
-// router.get('/:id/reservations', UserBusinessController.reservationCheckBusiness.get);
-// router.patch('/:id/reservations', UserBusinessController.reservationCheckBusiness.approval);
+router.get('/:id/reservations', UserBusinessController.reservationCheckBusiness);
+router.patch('/:id/reservations', UserBusinessController.reservationApprivalBusiness);
+router.patch('/:id/reservations', UserBusinessController.reservationDisapprovalBusiness);
 router.delete('/:id/withdrawal', UserBusinessController.withdrawalBusiness);
 
 module.exports = router;

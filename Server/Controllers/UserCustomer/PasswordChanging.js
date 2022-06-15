@@ -1,4 +1,4 @@
-const { user } = require('../../models/users');
+const { Users } = require('../../models');
 const { isAuthorized } = require('../TokenFunction');
 
 module.exports = async (req, res) => {
@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
   };
   const { password } = req.body;
 
-  await user.update({
+  await Users.update({
     password
   },
   {
