@@ -2,15 +2,15 @@ const express = require('express');
 const router = express.Router();
 const app = express();
 
-app.get('/', (req, res) => {
-  res.status(201).send('Hello World');
-});
-
 const CampsiteList = require('./Campsites/CampsiteList');
 const Reservation = require('./Campsites/Reservation');
 const RoomList = require('./Campsites/RoomList');
 const login = require;
 //default API
+router.get('/', (req, res) => {
+  res.send('welcome heulgbalcamping!');
+});
+
 router.get('/campsites', CampsiteList);
 router.get('/campsites/:id/rooms', RoomList);
 router.post('/campsites/:id/rooms/:id/reservation', Reservation);

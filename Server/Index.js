@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: true,
+    origin: ['https://heulgbalcamping.com', 'http://localhost:4000'],
     credentials: true,
     methods: ['GET', 'POST', 'OPTIONS', 'DELETE', 'PATCH'],
   }),
@@ -30,10 +30,8 @@ sequelize
 
 app.use(cookieParser());
 app.use('/', controllers);
-app.get('/', (req, res) => {
-  res.status(200).send('Hello World');
-});
-const HTTPS_PORT = process.env.HTTPS_PORT || 80;
+
+const HTTPS_PORT = process.env.HTTPS_PORT || 4000;
 
 let server;
 if (fs.existsSync('./key.pem') && fs.existsSync('./cert.pem')) {
