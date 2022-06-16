@@ -1,0 +1,69 @@
+.reservation-main-button {
+  width: 9em;
+  height: 4em;
+  margin-left: 0.5em;
+  border-color: bisque;
+  background-color: bisque;
+  text-align: center;
+  font-size: 2em;
+}
+
+.reservation-serch-button {
+  width: 9em;
+  height: 4em;
+  margin-left: 27.5em;
+  border-color: bisque;
+  background-color: bisque;
+  text-align: center;
+  font-size: 2em;
+}
+
+.reservation-profile-button {
+  height: 4em;
+  width: 7.5em;
+  margin-left: 2em;
+  border-color: bisque;
+  background-color: bisque;
+  text-align: center;
+  font-size: 2em;
+}
+
+.reservation-border {
+  border: 2px solid bisque;
+  margin: 2em 2em;
+  padding: 1em;
+}
+
+.reservation-mainbox {
+  margin: 2em 2em 0em 2em ;
+  border: 2px solid bisque;
+}
+
+
+.reservation-page-input {
+  padding: auto;;
+}
+
+.reservation-input-text {
+  font-size: 2em;
+  margin: 2em 2em 0.5em 2em;
+  text-align: center;
+}
+
+.password-button {
+  margin: 1em 0em 1.5em 31em;
+}
+
+.mypage-edit-button {
+  margin-left: 2em;
+}
+
+.reservation-camp-main-box {
+  height: 80em;
+}
+
+.reservation-main-return {
+  font-size: 1.5em;
+  background-color: bisque;
+  margin: 2em 34.75em;
+}
