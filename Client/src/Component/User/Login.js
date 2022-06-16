@@ -114,7 +114,7 @@ const TouchPoint = styled.div`
 
 export function Login ({ handleResponseSuccess }) {
   const [loginInfo, setLoginInfo] = useState({
-    userId: "",
+    customer_id: "",
     password: "",
   })
 
@@ -123,7 +123,7 @@ export function Login ({ handleResponseSuccess }) {
   }
 
   const handleLogin = () => {
-    const userInfo = dummy.user.find(el => el.userId === loginInfo.userId)
+    const userInfo = dummy.user.find(el => el.customer_id === loginInfo.customer_id)
     if (userInfo.password === loginInfo.password) {
       window.location.replace("/")
       console.log('넬라굿')
@@ -145,7 +145,7 @@ export function Login ({ handleResponseSuccess }) {
           <div className="email-req">아이디</div>
           <input 
           onKeyPress={(e) => {if (e.key === "Enter") {handleLogin()}}}
-          onChange={(e) => handleInputValue(e, "userId")}></input>
+          onChange={(e) => handleInputValue(e, "customer_id")}></input>
           <div className="email-req">패스워드</div>
           <input type="password"
           onKeyPress={(e) => {if (e.key === "Enter") {handleLogin()}}}
