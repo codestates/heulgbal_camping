@@ -1,4 +1,5 @@
-const { Users } = require('../../models/users');
+// 완료
+const { Users } = require('../../models');
 const { isAuthorized } = require('../TokenFunction');
 
 module.exports = async (req, res) => {
@@ -12,6 +13,6 @@ module.exports = async (req, res) => {
     where: { id }
   })
   .then (() => {
-    res.sendStatus(201).send('계정이 정상적으로 삭제되었습니다');
+    res.status(201).send('계정이 정상적으로 삭제되었습니다');
   });
 };

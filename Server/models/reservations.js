@@ -15,10 +15,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   Reservations.init({
     room_id: DataTypes.INTEGER,
-    option_quantity: DataTypes.JSON,
     people_count: DataTypes.INTEGER,
     customer_id: DataTypes.STRING,
-    business_number: DataTypes.INTEGER,
+    business_number: DataTypes.STRING,
     room_approval_state: DataTypes.STRING
   }, {
     sequelize,

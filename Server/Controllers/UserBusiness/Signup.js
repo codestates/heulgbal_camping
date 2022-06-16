@@ -1,4 +1,4 @@
-const { Users } = require('../../models/users');
+const { Users } = require('../../models');
 const { generateAccessToken } = require('../TokenFunction');
 
 module.exports = async (req, res) => {
@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
   if (!business_number || !password || !email || !name || !phone || !business_address || !business_name){
     return res.status(401).send('not authorized');
   };
-  // userInfo에 정보가 들어감. 
+  // userInfo에 정보가 들어감.
   // 이미 정보가 존재한다면 created = false,
   // 새로 들어온 정보라면 created = true
   // id 값과 이메일이 중복되면, 회원가입 거절
@@ -33,17 +33,32 @@ module.exports = async (req, res) => {
     if (userInfo) {
       res.status(409).send('already exists')
     } else {
-      res.status(200).send('created!')
-      await Users.create({
-        customer_id: null, password, email, name, phone,
-        business_number,business_address,
+      //res.status(200).send('created!')
+      Users.create({
+        customer_id : null, password: password, 
+        email: email, name : name, phone : phone,
+        business_number: business_number,
+        business_address: business_address,
         type: 1,
         email_authorization: null,
       })
       .then(() => {
-        delete userInfo.password;
-        const accessToken = generateAccessToken(userInfo.dataValues);
-        return res.status(201).cookie('jwt', accessToken).json({message: 'ok'});
+        return res.status(201).send('created!')
       })
+      // .then(() => {
+      //   delete userInfo.password;
+      //   const accessToken = generateAccessToken(userInfo.dataValues);
+      //   return res.status(201).cookie('jwt', accessToken).json({message: 'ok'});
+      // })
     }
 };
+
+// {
+//   "business_number":"42608080808",
+//   "password":"123456",
+//   "email":"campingdog@gmail.com",
+//   "name":"김코딩",
+//   "business_name":"campingdog",
+//   "business_address":"경기도 수원시",
+//   "phone":"10789456123"
+// }

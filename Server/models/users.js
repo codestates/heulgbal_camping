@@ -1,6 +1,6 @@
-'use strict';
-const {sequelize, DataTypes} = require('sequelize')
+// 완료
 
+'use strict';
 const {
   Model
 } = require('sequelize');
@@ -17,13 +17,13 @@ module.exports = (sequelize, DataTypes) => {
   }
   Users.init({
     customer_id: DataTypes.STRING,
-    business_number: DataTypes.INTEGER,
+    business_number: DataTypes.STRING,
     password: DataTypes.STRING,
     email: DataTypes.STRING,
     name: DataTypes.STRING,
     business_name: DataTypes.STRING,
     business_address: DataTypes.STRING,
-    phone: DataTypes.INTEGER,
+    phone: DataTypes.STRING,
     type: DataTypes.INTEGER,
     email_authorization: DataTypes.INTEGER
   }, {

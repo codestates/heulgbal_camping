@@ -1,3 +1,5 @@
+// 완료
+
 require('dotenv').config();
 const {
   generateAccessToken,
@@ -28,9 +30,9 @@ module.exports = async (req, res) => {
     };
 
     const accessToken = generateAccessToken(data);
-    //const refreshToken = generateRefreshToken(data);
+    // const refreshToken = generateRefreshToken(data);
 
     sendAccessToken(res, accessToken);
-    //sendRefreshToken(res, refreshToken);
+    // sendRefreshToken(res, refreshToken);
   };
 };

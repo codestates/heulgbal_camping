@@ -1,5 +1,5 @@
 // model에서 예약 리스트 내역 가져와서 띄우기
-const reservation = require('../../models/reservations'); // 응답을 실행하는 함수
+const Reservations = require('../../models'); // 응답을 실행하는 함수
 const sequelize = require('../../models');
 const { isAuthorized } = require('../TokenFunction');
 const { QueryTypes } = require("sequelize");
@@ -13,7 +13,7 @@ module.exports = {
     // 해당 사업자가 갖고 있는 예약 내역 
     // reservatioins 데이터베이스에 'business_number' 추가하고
     // 해당 column에 'user' 데이터에 있는 'business_number' 추가
-    const result = await reservation.findAll({
+    const result = await Reservations.findAll({
       where:{
         business_number: userInfo.business_number,
       },

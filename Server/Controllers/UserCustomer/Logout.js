@@ -1,4 +1,5 @@
-const { deleteRefreshToken, isAuthorized } = require('../TokenFunction');
+// 완료
+const { deleteAccessToken, deleteRefreshToken, isAuthorized } = require('../TokenFunction');
 
 module.exports = (req, res) => {
   const tokenData = isAuthorized(req);
@@ -8,6 +9,7 @@ module.exports = (req, res) => {
   }
 
   // 로그아웃 요청시 refresh token 삭제
-  deleteRefreshToken(res);
-  return res.sendStatus(201);
+  // deleteRefreshToken(res);
+  deleteAccessToken(res);
+  return res.status(201).send('successfully loged-out');
 };

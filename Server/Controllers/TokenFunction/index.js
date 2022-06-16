@@ -3,23 +3,19 @@ const { sign, verify } = require('jsonwebtoken');
 
 module.exports = {
   generateAccessToken: (data) => {
-<<<<<<< HEAD
     return sign(data, process.env.ACCESS_SECRET, { expiresIn: '1h'});
   },
   generateRefreshToken: (data) => {
     return sign(data, process.env.REFRESH_SECRET, { expiresIn : '2d'})
-=======
-    return sign(data, process.env.ACCESS_SECRET, { expiresIn: '15s'});
-  },
-  generateRefreshToken: (data) => {
-    return sign(data, process.env.REFRESH_TOKEN, { expiresIn : '2h'})
->>>>>>> a781c7b78944132e931bd8fbdff67325398c384b
   },
   sendAccessToken: (res, accessToken) => {
     return res.cookie('jwt', accessToken).json({ data: { accessToken }, message: 'ok' });  
   },
   sendRefreshToken: (res, refreshToken) => {
     return res.cookie('refreshToken', refreshToken);
+  },
+  deleteAccessToken: (res) =>{
+    res.clearCookie('accessToken');
   },
   deleteRefreshToken: (res) => {
     res.clearCookie('refreshToken');
@@ -29,7 +25,8 @@ module.exports = {
     if(!authorization) {
       return null;
     }
-    const token = authorization.split(' ')[1];
+    // const token = authorization.split(' ')[1];
+    const token = authorization
     try {
       return verify(token, process.env.ACCESS_SECRET);
     } catch(error) { return null; }
