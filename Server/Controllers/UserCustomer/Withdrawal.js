@@ -1,3 +1,5 @@
+// 완료
+
 const { Users } = require('../../models');
 const { isAuthorized } = require('../TokenFunction');
 
@@ -13,6 +15,6 @@ module.exports = async (req, res) => {
   })
   // CLI 창에서 오류는 뜨는데, 정상적으로 삭제됨
   .then (() => {
-    res.sendStatus(201).send('계정이 정상적으로 삭제되었습니다');
+    res.status(201).send('계정이 정상적으로 삭제되었습니다');
   });
 };

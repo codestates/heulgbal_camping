@@ -1,3 +1,4 @@
+// 완료 but, CLI 에서 오류 나옴. 정보 변경은 됨
 const { Users } = require('../../models');
 const { isAuthorized,
         generateAccessToken,
