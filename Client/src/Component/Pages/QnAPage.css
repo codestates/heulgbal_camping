@@ -1,18 +1,18 @@
-.qna-button {
-  border-color: bisque;
-  background-color: bisque;
-}
-
 .qna-main-button {
-  width: 9em;
-  height: 4em;
-  margin-left: 0.5em;
+  width: auto;
+  height: auto;
+  font-size: 3.5em;
+  border: white;
+  background-color: white;
+  text-shadow: 2px 2px 2px rgb(243, 185, 68);
+  color: rgb(198, 138, 18);
+  margin: 0em 0em 1em 0.4em;
 }
 
 .qna-profile-button {
-  height: 4em;
-  width: 9em;
-  margin-left: 37em;
+  width: 3em;
+  margin-left: 78.7em;
+  margin-right: 0em;
 }
 
 .qna-text {
@@ -20,11 +20,11 @@
   font-size: 2em;
 }
 
-.qna-border {
+/* .qna-border {
   border: 2px solid bisque;
   margin: 2em 2em;
   padding: 1em;
-}
+} */
 
 .qna-mainbox {
   width: 57.5em;
@@ -47,6 +47,56 @@
 }
 
 .qna-input {
-  height: 25em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
+.qna-input-text {
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 5px whitesmoke  ;
+  margin: 2em;
+}
+
+.qna-input-text-1 {
+  margin: 1em;
+}
+
+.qna-input-text-2 {
+  font-size: 1.75em;
+  margin: 1em;
+}
+
+.qna-input-text-3 {
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+  margin: 1em ;
+  margin-top: 3em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.qna-input-button {
+  width: 17.5em;
+  height: 2em;
+  font-size: 1.2em;
+  border: none;
+  margin: 0.5em 1em 0.5em;
+  border-radius: 2em;   
+  float: left;
+}
+
+.qna-question-block1 {
+  height: 5em;
+  border-radius: 2em;
+  box-shadow: 5px 5px 5px 5px whitesmoke  ;
+  width: 100em;
+  margin: 1.5em 1em;
+}

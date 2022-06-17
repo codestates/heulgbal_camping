@@ -1,41 +1,54 @@
-//마이페이지
-import React from 'react';
-import './SerchMain.css'
+// //마이페이지
+// import React from 'react';
+// import './SerchMain.css'
+// import styled from 'styled-components';
 
-const Main = () => {
-  return (
-  <div>
-    <div className='serchmain-border'>
-        <button className='serchmain-main-button serchmain-text serchmain-button'>흙발캠핑</button>
-        <button className='serchmain-serch-button serchmain-text serchmain-button' >검색</button>
-        <button className='serchmain-profile-button serchmain-text serchmain-button' >프로필</button>
-      </div>
-      <div className='serchmain-mainbox'>
-    <p className='serchmain-sidebar'>
-    <button className='serchmain-sidebutton serchmain-button'>회원정보</button>
-    <button className='serchmain-sidebutton serchmain-button'>캠핑장 예약관리</button>
-    <button className='serchmain-sidebutton serchmain-button'>회원탈퇴</button>
-    </p>
-    <div className='serchmain-page-input'>
-      <div className='serchmain-input-text'>
-        이름
-      </div>
-      <input className='input-box'/>
-      <div className='serchmain-input-text'>
-      연락처
-      </div>
-      <input className='input-box'/>
-      <div className='serchmain-input-text'>
-        이메일
-      </div>
-      <input className='input-box'/>
-      <div />
-    <button className='serchmain-text password-button serchmain-button'>비밀번호 변경</button>
-    <button className='serchmain-text serchmainpage-edit-button serchmain-button'>개인정보 수정</button>
-    </div>
-      </div>
-    </div>
-  );
-};
+// const First = styled.div`
+//   left: 50%;
+//   right: 50%;
+//   width: 100em;
+//   height: auto;
+//   position: absolute;
+//   /* background-color: white; */
+//   border-radius: 0.3rem;
+//   align-content: space-between;
+//   transform: translate(-50%);
+//   border: 2px solid yellowgreen;
+//   text-align: center;
+//   /* background-color: rgba(0, 0, 0, 0.1); */
+// `;
 
-export default Main;
+
+// const Main = () => {
+
+//   const mainClick = (e) => {
+//     window.location.href = "/"
+//   }
+
+//   return (
+//   <First>
+//     <div className='serchmain-border'>
+//         <button className='serchmain-main-button' onClick={mainClick}>흙발캠핑</button>
+//         <button className='serchmain-serch-button' >검색</button>
+//         <button className='serchmain-profile-button' >프로필</button>
+//       </div>
+//       <div className='serchmain-mainbox'>
+//     <span className='serchmain-sidebar'>
+//     <span className='serchmain-sidebutton'>날짜</span>
+//     <input className='setInput'/>
+//     <span className='serchmain-sidebutton'>지역</span>
+//     <input className='setInput'/>
+//     <span className='serchmain-sidebutton'>캠핑장 이름</span>
+//     <input className='setInput'/>
+//     <span className='serchmain-sidebutton'>인원설정</span>
+//     <input className='setInput'/>
+//     <span className='serchmain-sidebutton'>숙소 검색</span>
+//     <input className='setInput'/>
+//     </span>
+//     <div className='serchmain-page-input'></div>
+//       </div>
+//     </First>
+//   );
+// };
+
+// export default Main;

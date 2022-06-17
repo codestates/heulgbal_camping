@@ -2,23 +2,63 @@
   "user": [
     {
       "id": 1,
-      "userId": "code1",
-      "password": "1234"
+      "customer_id": "code1",
+      "business_number": null,
+      "password": "1",
+      "email": "mokoko1@gmail.com",
+      "name": "mokoko1",
+      "business_name": null,
+      "business_address": null,
+      "phone": "010-1111-2222",
+      "type": "0",
+      "email_authorization": null,
+      "created_at": "2022-06-14",
+      "updated_at": "2022-06-14"
     },
     {
       "id": 2,
-      "userId": "code2",
-      "password": "1234"
+      "customer_id": "code2",
+      "business_number": null,
+      "password": "2",
+      "email": "mokoko2@gmail.com",
+      "name": "mokoko2",
+      "business_name": null,
+      "business_address": null,
+      "phone": "010-2222-3333",
+      "type": "0",
+      "email_authorization": null,
+      "created_at": "2022-06-14",
+      "updated_at": "2022-06-14"
     },
     {
       "id": 3,
-      "userId": "code3",
-      "password": "1234"
+      "customer_id": null,
+      "business_number": "0001122222",
+      "password": "3",
+      "email": "mokoko3@gmail.com",
+      "name": "businessMokoko3",
+      "business_name": "모코코의 사업장",
+      "business_address": "지옥불반도 무간시",
+      "phone": "010-3333-4444",
+      "type": "1",
+      "email_authorization": null,
+      "created_at": "2022-06-14",
+      "updated_at": "2022-06-14"
     },
     {
       "id": 4,
-      "userId": "code4",
-      "password": "1234"
+      "customer_id": null,
+      "business_number": "0002255555",
+      "password": "4",
+      "email": "mokoko4@gmail.com",
+      "name": "businessMokoko4",
+      "business_name": "자라나는 새싹의 사업장",
+      "business_address": "나선은하도 화성시",
+      "phone": "010-3333-4444",
+      "type": "1",
+      "email_authorization": null,
+      "created_at": "2022-06-14",
+      "updated_at": "2022-06-14"
     }
   ]
 }

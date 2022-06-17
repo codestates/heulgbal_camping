@@ -1,50 +1,40 @@
-.business-button {
-  border-color: bisque;
-  background-color: bisque;
+.c-business-main-button {
+  width: auto;
+  height: auto;
+  font-size: 3.5em;
+  border: white;
+  background-color: white;
+  text-shadow: 2px 2px 2px rgb(243, 185, 68);
+  color: rgb(198, 138, 18);
+  margin: 0em 0em 1em 0.4em;
 }
 
-.business-main-button {
-  width: 9em;
-  height: 4em;
-  margin-left: 0.5em;
+.c-business-profile-button {
+  width: 3em;
+  margin-left: 78.7em;
+  margin-right: 0em;
 }
 
-.business-profile-button {
-  height: 4em;
-  width: 7.5em;
-  margin-left: 38em;
-}
-
-.business-text {
-  text-align: center;
-  font-size: 2em;
-}
-
-.business-border {
-  border: 2px solid bisque;
-  margin: 2em 2em;
-  padding: 1em;
-}
-
-.business-main-box {
+.c-business-main-box {
   margin: 2em 2em 0em 2em ;
   border: 2px solid bisque;
 }
 
-.business-sidebar {
+.c-business-sidebar {
   width: 20em;
   margin-top: 0em;
   float: left;
 }
 
-.business-side-button {
-  width: 7em;
-  height: 3em;
+.c-business-side-button {
+  width: 10em;
+  height: 6em;
   font-size: 2em;
-  margin: 1.4em;
+  background-color: white;
+  border: white;
 }
 
-.business-page-input {
+.c-business-page-input {
   width: 90em;
   display: inline-block;
   border-left: 2px solid bisque;
@@ -52,26 +42,26 @@
   height: 48em;
 }
 
-.business-page-signout {
+.c-business-page-signout {
   font-size: 5em;
   margin: 2em 2em 0.5em 2em;
   height: auto;
 }
 
-.business-input-box {
+.c-business-input-box {
   width: 20em;
   height: 3.5em;
   margin: 0em 0em 2em 5em;
 }
 
-.business-sign-out-button {
+.c-business-sign-out-button {
   margin: auto;
   height: 3em;
   width: 5em;
   font-size: 0.5em;
 }
 
-.business-sign-out-input {
+.c-business-sign-out-input {
   margin-top: 1em;
   margin-bottom: 8em;
   height: 3em;
