@@ -13,7 +13,7 @@ module.exports = {
     */
     await queryInterface.bulkInsert('Users', [
       {
-        id: 4,
+
         customer_id: "cidar",
         business_number: null,
         password: "password123",
@@ -28,7 +28,7 @@ module.exports = {
         updatedAt: new Date
       },
       {
-        id: 5,
+
         customer_id: "sprite",
         business_number: null,
         password: "123456789",
@@ -43,7 +43,7 @@ module.exports = {
         updatedAt: new Date
       },
       {
-        id: 6,
+
         customer_id: null,
         business_number: "12345678",
         password: "passwordnumber123",
@@ -58,7 +58,7 @@ module.exports = {
         updatedAt: new Date
       },
       {
-        id: 7,
+
         customer_id: null,
         business_number: "87654321",
         password: "123456789",

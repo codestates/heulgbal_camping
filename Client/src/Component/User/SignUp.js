@@ -1,9 +1,10 @@
 //회원가입
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"
-import styled from "styled-components"
-// import axios from "axios"
-// import dummy from "../../DB/User.json"
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import axios from 'axios'
+const isServer = 'http://localhost:4000'
+// import dummy from '../../DB/User.json'
 
 // 스타일 컴포넌트
 const Wallpaper = styled.div`
@@ -12,7 +13,7 @@ const Wallpaper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmYtcW%2FbtrEhpnNT3P%2FmKrwAndM9av5aKOkbTWK2K%2Fimg.jpg"),
+  background: url('https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmYtcW%2FbtrEhpnNT3P%2FmKrwAndM9av5aKOkbTWK2K%2Fimg.jpg'),
     linear-gradient(to right bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   background-size: cover;
   background-repeat: no-repeat;
@@ -116,28 +117,28 @@ export function Login ({ handleResponseSuccess }) {
 
   // input 데이터 저장
   const [isUserInfo, setUserInfo] = useState({
-    customer_id: "",
-    business_number: "",
-    password: "",
-    email: "",
-    name: "",
-    business_name: "",
-    business_address: "",
-    phone: ""
+    customer_id: '',
+    password: '',
+    email: '',
+    name: '',
+    phone: ''
   })
-
+  // business_name: null,
+  // business_address: null,
+  // business_number: null,
+  
   //안내문구 ON, OFF
   const [isCheckCustomerId, setCheckCustomerId] = useState(false)
   const [isCheckPassword, setCheckPassword] = useState(false)
   const [isCheckPassword2, setCheckPassword2] = useState(false)
   const [isCheckEmail, setCheckEmail] = useState(false)
   // const [isCheckTel, setCheckTel] = useState(false)
-  const [inputValue, setInputValue] = useState("")
+  const [inputValue, setInputValue] = useState('')
 
   //input 값 저장 함수
   const handleInputValue = (e, key) => {
     setUserInfo({...isUserInfo, [key]: e.target.value})
-    console.log(isUserInfo.phone)
+    // console.log(isUserInfo.phone)
   }
 
   //input 데이터 필터링 함수들 
@@ -180,12 +181,37 @@ export function Login ({ handleResponseSuccess }) {
   //휴대전화 하이픈 자동완성
   useEffect(() => {
     if (inputValue.length === 10) {
-      setInputValue(inputValue.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3'));
+      setInputValue(inputValue.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3'));
     }
     if (inputValue.length === 13) {
       setInputValue(inputValue.replace(/-/g, '').replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3'));
     }
   }, [inputValue]);
+
+  const handleSignUp = () => {
+  if (!(isUserInfo.customer_id && isUserInfo.password && isUserInfo.email && isUserInfo.name && isUserInfo.phone)) {
+    // console.log(isUserInfo.customer_id)
+    // console.log(isUserInfo.password)
+    // console.log(isUserInfo.email)
+    // console.log(isUserInfo.name)
+    // console.log(isUserInfo.phone)
+    alert ("모든 정보를 입력해야 됩니다.")
+  }
+  else {
+    axios.post(`${isServer}/user/signup`, isUserInfo
+    // {
+    //   customer_id: isUserInfo.customer_id,
+    //   password: isUserInfo.password,
+    //   email: isUserInfo.email,
+    //   name: isUserInfo.name,
+    //   phone: isUserInfo.phone
+    // }
+    )
+    .then(() => alert("회원가입 성공"))
+    window.location.replace('/login')
+    .catch(err => console.log(err))
+  }
+}
 
 
 
@@ -195,60 +221,60 @@ export function Login ({ handleResponseSuccess }) {
       <Wraper>
         <TouchPoint>
 
-        <img className="title" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbWrsX0%2FbtrEzJkKHFe%2Fvwp0KU3Gt1E4QK5quUPne1%2Fimg.png" alt=""/>
+        <img className='title' src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbWrsX0%2FbtrEzJkKHFe%2Fvwp0KU3Gt1E4QK5quUPne1%2Fimg.png' alt=''/>
 
           {/* ID 입력칸 */}
-          <div className="email-req">아이디</div>
+          <div className='email-req'>아이디</div>
           <input 
-          type="text"
+          type='text'
           maxlength='14'
           value={isUserInfo.customer_id}
-          onChange={(e) => isFilterId(e, "customer_id")} />
-          {isCheckCustomerId ? (<div className="isFalse">아이디는 영문 숫자 조합 5자 이상 작성해야됩니다.</div>) : null}
+          onChange={(e) => isFilterId(e, 'customer_id')} />
+          {isCheckCustomerId ? (<div className='isFalse'>아이디는 영문 숫자 조합 5자 이상 작성해야됩니다.</div>) : null}
 
           {/* 패스워드 입력칸 */}
-          <div className="email-req">패스워드</div>
+          <div className='email-req'>패스워드</div>
           <input
-          type="password"
+          type='password'
           maxlength='14'
-          onChange={(e) => isFilterPw(e, "password")} />
-          {isCheckPassword ? (<div className="isFalse">숫자 영문 특수문자 조합 8자리 이상 작성해야됩니다.</div>) : null}
+          onChange={(e) => isFilterPw(e, 'password')} />
+          {isCheckPassword ? (<div className='isFalse'>숫자 영문 특수문자 조합 8자리 이상 작성해야됩니다.</div>) : null}
           
           {/* 패스워드 재확인 입력칸 */}
-          <div className="email-req">PASSWORD 재확인</div>
+          <div className='email-req'>PASSWORD 재확인</div>
           <input
-          type="password"
+          type='password'
           onChange={(e) => isFilterPw2(e)}
           />
-          {isCheckPassword2 ? (<div className="isTrue">비밀번호가 일치합니다.</div>) : null}
+          {isCheckPassword2 ? (<div className='isTrue'>비밀번호가 일치합니다.</div>) : null}
 
           {/* 실명 입력칸 */}
-          <div className="email-req">실명</div>
-          <input />
+          <div className='email-req'>실명</div>
+          <input onChange={(e) => handleInputValue(e, 'name')}/>
 
           {/* 이메일 입력칸 */}
-          <div className="email-req">email</div>
+          <div className='email-req'>email</div>
           <input
-          type="email"
-          onChange={(e) => isFilterEmail(e, "email")}
+          type='email'
+          onChange={(e) => isFilterEmail(e, 'email')}
           />
-          {isCheckEmail ? (<div className="isFalse">올바르지 않은 형식의 이메일입니다.</div>) : null}
+          {isCheckEmail ? (<div className='isFalse'>올바르지 않은 형식의 이메일입니다.</div>) : null}
 
           {/* 휴대전화 입력칸 */}
-          <div className="email-req">휴대전화</div>
+          <div className='email-req'>휴대전화</div>
           <input
-          type="text"
+          type='text'
           value={inputValue}
-          onChange={(e) => isFilterTel(e, "phone")}
+          onChange={(e) => isFilterTel(e, 'phone')}
           />
 
           {/* 서버와 연결되야 할 가입하기 버튼 */}
-          <button className="submit">가입하기</button>
+          <button className='submit' onClick={handleSignUp}>가입하기</button>
 
-          <div className="query1">
-          <span className="query"><pr>계정이 있으신가요? </pr></span>
+          <div className='query1'>
+          <span className='query'><pr>계정이 있으신가요? </pr></span>
           <span>
-            <Link to="/login">로그인</Link>
+            <Link to='/login'>로그인</Link>
           </span>
           </div>
 
