@@ -26,7 +26,7 @@ module.exports = {
   infoChangeBusiness: require('../Controllers/UserBusiness/InformationChanging'),
   passwordChangeBusiness: require('../Controllers/UserBusiness/PasswordChanging'),
   reservationCheckBusiness: require('../Controllers/UserBusiness/ReservationListCheck').get,
-  reservationApprivalBusiness: require('../Controllers/UserBusiness/ReservationListCheck').approval,
+  reservationApprovalBusiness: require('../Controllers/UserBusiness/ReservationListCheck').approval,
   reservationDisapprovalBusiness: require('../Controllers/UserBusiness/ReservationListCheck').disapproval,
   withdrawalBusiness: require('../Controllers/UserBusiness/Withdrawal')
 };

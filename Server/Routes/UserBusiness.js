@@ -8,7 +8,7 @@ router.post('/signup', UserBusinessController.signupBusiness);
 router.patch('/:id/information', UserBusinessController.infoChangeBusiness);
 router.patch('/:id/password', UserBusinessController.passwordChangeBusiness);
 router.get('/:id/reservations', UserBusinessController.reservationCheckBusiness);
-router.patch('/:business_number/reservations', UserBusinessController.reservationApprivalBusiness);
+router.patch('/:id/reservations', UserBusinessController.reservationApprovalBusiness);
 router.patch('/:id/reservations', UserBusinessController.reservationDisapprovalBusiness);
 router.delete('/:id/withdrawal', UserBusinessController.withdrawalBusiness);
 
