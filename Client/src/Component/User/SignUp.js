@@ -42,29 +42,24 @@ const TouchPoint = styled.div`
   border-radius: 0.3rem;
   align-content: space-between;
   transform: translate(-50%);
-
   > img.title {
     display: block;
     max-width: 50%;
     max-height: 50%;
     margin: 0 auto;
     }
-
     > div.query1 {
     padding-top: 3rem;
     text-align: center;
   }
-
   > span.signup-button {
     color: grey;
   }
-
   > div.email-req {
     padding-top: 2rem;
     font-size: 80%;
     color: rgba(0, 0, 0, 0.5);
   }
-
   > input {
     padding-top: 0.3rem;
     font-size: 1.2rem;
@@ -76,17 +71,14 @@ const TouchPoint = styled.div`
     border-bottom-width: 0.5px;
     border-color: rgba(0, 0, 0, 0.1);
   }
-
   > input:focus {
     border-bottom-width: 2.5px;
     border-color: rgba(0, 0, 0, 0.5);
   }
-
   > div.error {
     color: rgba(0, 0, 0, 0.5);
     font-size: 0.9rem;
   }
-
   > button.submit {
     height: auto;
     width: 100%;
@@ -99,7 +91,6 @@ const TouchPoint = styled.div`
     text-align: center;
     cursor: pointer;
   }
-
   > button.oauth {
     width: 10rem;
     height: auto;
@@ -113,16 +104,12 @@ const TouchPoint = styled.div`
     border-radius: 2rem;
     cursor: pointer;
   }
-
   > div.isFalse {
     color: red;
   }
-
   > div.isTrue {
     color: green;
   }
-
-
 `;
 
 export function Login ({ handleResponseSuccess }) {
