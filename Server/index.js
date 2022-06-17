@@ -32,7 +32,7 @@ app.get('/user', (req, res) => {
 
 const UserBusinessRouter  = require('./Routes/UserBusiness');
 const UserCustomerRouter = require('./Routes/UserCustomer');
-// const CampsitesRouter = require('/Routes/Campsites);
+// const CampsitesRouter = require('./Routes/Campsites);
 
 // express use routers
 

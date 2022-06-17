@@ -1,8 +1,8 @@
 // model에서 예약 리스트 내역 가져와서 띄우기
 const Reservations = require('../../models'); // 응답을 실행하는 함수
-const sequelize = require('../../models');
+const sequelize = require('sequelize');
 const { isAuthorized } = require('../TokenFunction');
-const { QueryTypes } = require("sequelize");
+const { QueryTypes } = require('sequelize');
 
 
 module.exports = {
@@ -18,15 +18,18 @@ module.exports = {
         business_number: userInfo.business_number,
       },
     });
-    res.status(200).json(result);
+    if (result === null) {
+      res.status(201).send('no reservations exist');
+    }
+    res.status(201).json(result);
   },
   // 예약 승인
   // 아무 버튼도 누르지 않은 상태 -> 대기중(기본 상태) or  null
   approval: async (req, res) => {
     // 사업자 정보 -> 스키마 수정
-    const userInfo = isAuthorized(req);
+    const userInfo = isAuthorized(req);""
 
-    await reservation.update(
+    await Reservations.update(
       {
         room_approval_state: "승인"
       },
@@ -41,7 +44,7 @@ module.exports = {
   disapproval: async (req, res) => {
     const userInfo = isAuthorized(req);
 
-    await reservation.update(
+    await Reservations.update(
       {
         room_approval_state: "거절"
       },
