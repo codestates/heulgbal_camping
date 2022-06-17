@@ -9,7 +9,7 @@ module.exports = {
     return sign(data, process.env.REFRESH_SECRET, { expiresIn : '2d'})
   },
   sendAccessToken: (res, accessToken) => {
-    return res.cookie('jwt', accessToken).json({ data: { accessToken }, message: 'ok' });  
+    return res.status(200).cookie('jwt', accessToken).json({ data: { accessToken }, message: 'ok' });  
   },
   sendRefreshToken: (res, refreshToken) => {
     return res.cookie('refreshToken', refreshToken);
