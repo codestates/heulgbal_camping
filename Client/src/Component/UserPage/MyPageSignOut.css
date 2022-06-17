@@ -1,79 +1,76 @@
-.my-button {
-  border-color: bisque;
-  background-color: bisque;
+.c-my-main-button {
+  width: auto;
+  height: auto;
+  font-size: 3.5em;
+  border: white;
+  background-color: white;
+  text-shadow: 2px 2px 2px rgb(243, 185, 68);
+  color: rgb(198, 138, 18);
+  margin: 0em 0em 1em 0.4em;
 }
 
-.my-main-button {
-  width: 9em;
-  height: 4em;
-  margin-left: 0.5em;
+.c-my-profile-button {
+  width: 3em;
+  margin-left: 78.7em;
+  margin-right: 0em;
 }
 
-.my-profile-button {
-  height: 4em;
-  width: 7.5em;
-  margin-left: 38em;
-}
-
-.my-text {
-  text-align: center;
-  font-size: 2em;
-}
-
-.my-border {
-  border: 2px solid bisque;
-  margin: 2em 2em;
-  padding: 1em;
-}
-
-.my-main-box {
+.c-my-main-box {
   margin: 2em 2em 0em 2em ;
   border: 2px solid bisque;
 }
 
-.my-sidebar {
+.c-my-sidebar {
   width: 20em;
   margin-top: 0em;
   float: left;
 }
 
-.my-side-button {
-  width: 7em;
-  height: 3em;
+.c-my-side-button {
+  width: 10em;
+  height: 6em;
   font-size: 2em;
-  margin: 1.4em;
+  background-color: white;
+  border: white;
 }
 
-.my-page-input {
+.c-my-page-input {
   width: 90em;
   display: inline-block;
   border-left: 2px solid bisque;
   text-align: center;
   height: 48em;
+  
 }
 
-.my-page-signout {
-  font-size: 5em;
-  margin: 2em 2em 0.5em 2em;
+.c-my-page-signout {
+  font-size: 2em;
+  margin: 8em 2em 2em 2em;
   height: auto;
 }
 
-.input-box {
+.c-input-box {
   width: 20em;
   height: 3.5em;
   margin: 0em 0em 2em 5em;
 }
 
-.sign-out-button {
-  margin: auto;
+.c-sign-out-button {
+  /* margin: auto; */
   height: 3em;
   width: 5em;
   font-size: 0.5em;
 }
 
-.sign-out-input {
-  margin-top: 1em;
-  margin-bottom: 8em;
-  height: 3em;
-  width: 20em;
+.c-sign-out-input {
+  padding-top: 0.3rem;
+  font-size: 1.2rem;
+  width: 20%;
+  outline: none;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0.5px;
+  border-color: black;
+  margin: 4em 0em 4em 0em;
 }

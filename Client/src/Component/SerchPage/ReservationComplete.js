@@ -17,16 +17,16 @@ const Main = () => {
       </div>
       <div className='reservation-mainbox'>
     <div className='reservation-page-input'>
-     <div className='reservation-input-text'>
+      <div className='reservation-input-text'>
       예약 신청 완료
-     </div>
-     <div className='reservation-input-text'>
+      </div>
+      <div className='reservation-input-text'>
       승인 완료 여부는 마이페이지 - 예약 현황에서 보실 수 있습니다.
-     </div>
-     <div className='reservation-input-text'>
+      </div>
+      <div className='reservation-input-text'>
       금액은 현장결제 입니다.
-     </div>
-     <button className='reservation-main-return' onClick={mainClick}>메인페이지 이동</button>
+      </div>
+      <button className='reservation-main-return' onClick={mainClick}>메인페이지 이동</button>
       <div />  
     </div>
       </div>

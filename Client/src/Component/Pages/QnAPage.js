@@ -1,12 +1,32 @@
 //qna페이지
 import React,{useState} from 'react';
 import './QnAPage.css'
+import MyModal from '../Model/ProFileModel';
+import styled from 'styled-components';
 //import { BrowserRouter,Route,Routes } from 'react-router-dom';
+
+const First = styled.div`
+left: 50%;
+right: 50%;
+width: 118em;
+height: auto;
+position: absolute;
+/* background-color: white; */
+border-radius: 0.3rem;
+align-content: space-between;
+transform: translate(-50%);
+/* border: 2px solid yellowgreen; */
+`;
 
 const Main = () => {
 
   const mainClick = (e) => {
     window.location.href = "/"
+  }
+
+  const [isOpen, setOpen] = useState(false)
+  const handleClick1 = () => {
+    setOpen(true)
   }
 
   const [isOpen1, isClosed1] = useState(false);
@@ -43,11 +63,18 @@ const Main = () => {
   }
   
   return (
-  <div>
-    <div className='qna-border'>
-      <button className='qna-main-button qna-button qna-text' onClick={mainClick}>흙발캠핑</button>
-      <button className='qna-profile-button qna-button qna-text'>프로필</button>
-    </div>
+    <First>
+    <div>
+    <span className='qna-border'>
+        <button className='qna-main-button' onClick={mainClick}>Heulgbal Camping</button>
+      <img className='my-isIcon' src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtbyGa%2FbtrEZN75A0O%2F5GoRRGqdjd1WQYwWosY8I0%2Fimg.png' alt=''/>
+        {/* <button className='serchb' onClick={serchClick}>검색</button> */}
+        <img className='qna-profile-button' onClick={handleClick1} src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fd2JHkq%2FbtrE1uApCCY%2FBJu43VM8miKTEHcFSAnqz0%2Fimg.png' alt='' />
+        <MyModal
+        isOpen={isOpen}
+        onRequestClose={() => setOpen(false)}
+        />
+        </span>
     <div className='qna-area'>
       <div className='qna-text qna-shadow'>자주 묻는 질문</div>
         <div className='qna-question-block1'>
@@ -87,6 +114,7 @@ const Main = () => {
       </div>
     </div>
   </div>
+  </First>
   );
 };
 
