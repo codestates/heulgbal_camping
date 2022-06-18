@@ -1,12 +1,13 @@
-const { campsite, campsite_images } = require('../../models');
+const { campsite, campsite_images } = require("../../models");
 module.exports = async (req, res) => {
+  // res.send('teeeeeeeest');
   try {
     const campsiteList = await campsite.findAll({
-      attributes: ['id', 'title', 'content', 'address', 'business_id'],
+      attributes: ["id", "title", "content", "address", "business_id"],
       include: [
         {
           model: campsite_images,
-          attributes: ['id', 'image_url', 'campsite_id'],
+          attributes: ["id", "image_url", "campsite_id"],
         },
       ],
     });

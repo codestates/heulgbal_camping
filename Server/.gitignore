@@ -1,7 +1,13 @@
-# environment variable
+# dotenv
 .env
 
 #dependencies
 /node_modules
 
+<<<<<<< HEAD
 #misc
+=======
+#misc
+
+#config
+>>>>>>> 92840714224fdf0477ebbb5b3ac6af5db97d2638

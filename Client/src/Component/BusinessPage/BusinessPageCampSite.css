@@ -1,0 +1,63 @@
+.b-business-main-button {
+  width: auto;
+  height: auto;
+  font-size: 3.5em;
+  border: white;
+  background-color: white;
+  text-shadow: 2px 2px 2px rgb(243, 185, 68);
+  color: rgb(198, 138, 18);
+  margin: 0em 0em 1em 0.4em;
+}
+
+.b-business-profile-button {
+  width: 3em;
+  margin-left: 78.7em;
+  margin-right: 0em;
+}
+
+.b-business-border {
+  border: 2px solid bisque;
+  margin: 2em 2em;
+  padding: 1em;
+}
+
+.b-business-main-box {
+  margin: 2em 2em 0em 2em ;
+  border: 2px solid bisque;
+}
+
+.b-business-sidebar {
+  width: 20em;
+  margin-top: 0em;
+  float: left;
+}
+
+.b-business-side-button {
+  width: 10em;
+  height: 6em;
+  font-size: 2em;
+  background-color: white;
+  border: white;
+}
+
+.b-business-page-input {
+  width: 90em;
+  display: inline-block;
+  border-left: 2px solid bisque;
+}
+
+.b-business-camp-input-text {
+  font-size: 2em;
+  margin: 2em 2em 0.5em 2em;
+  height: 30em;
+}
+
+.b-business-password-button {
+  margin: 1em 0em 1.5em 31em;
+  border-left: 2px solid bisque;
+}
+
+.b-business-page-edit-button {
+  margin-left: 2em;
+}
+

@@ -1,3 +1,1 @@
-const { reservation, options } = require('../../models');
-
-module.exports = async (req, res) => {};
+// 캠핑장/방 목록 가져와서 예약 시스템 만들어놓기

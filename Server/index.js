@@ -4,21 +4,24 @@ const https = require('https');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const express = require('express');
-const app = express();
-const { sequelize } = require('./models');
 
-const controllers = require('./Controllers/Index');
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
+<<<<<<< HEAD:Server/Index.js
     origin: ['https://heulgbalcamping.com', 'http://localhost:4000'],
+=======
+    origin: ['http://localhost:3000'],
+>>>>>>> 92840714224fdf0477ebbb5b3ac6af5db97d2638:Server/index.js
     credentials: true,
     methods: ['GET', 'POST', 'OPTIONS', 'DELETE', 'PATCH'],
   }),
 );
 
+<<<<<<< HEAD:Server/Index.js
 sequelize
   .sync({ force: false })
   .then(() => {
@@ -33,9 +36,38 @@ app.use(cookieParser());
 const CampsitesRouter = require('./Routes/Campsites');
 
 app.use('/campsites', CampsitesRouter);
+=======
+app.use(cookieParser());
+
+app.get('/', (req, res) => {
+  res.status(201).send('HEULGBAL CAMPING!');
+});
+app.get('/business', (req, res) => {
+  res.status(201).send('Business User Page')
+});
+app.get('/user', (req, res) => {
+  res.status(201).send('Customer User Page')
+});
+// routers declaration
+
+const UserBusinessRouter  = require('./Routes/UserBusiness');
+const UserCustomerRouter = require('./Routes/UserCustomer');
+// const CampsitesRouter = require('./Routes/Campsites);
+
+// express use routers
+
+app.use('/business', UserBusinessRouter);
+app.use('/user', UserCustomerRouter);
+// app.use('/campsites', CampsitesRouter);
+
+// app.use()
+>>>>>>> 92840714224fdf0477ebbb5b3ac6af5db97d2638:Server/index.js
 
 const HTTPS_PORT = process.env.HTTPS_PORT || 4000;
 
+// 인증서 파일들이 존재하는 경우에만 https 프로토콜을 사용하는 서버를 실행합니다.
+// 만약 인증서 파일이 존재하지 않는경우, http 프로토콜을 사용하는 서버를 실행합니다.
+// 파일 존재여부를 확인하는 폴더는 서버 폴더의 package.json이 위치한 곳입니다.
 let server;
 if (fs.existsSync('./key.pem') && fs.existsSync('./cert.pem')) {
   const privateKey = fs.readFileSync(__dirname + '/key.pem', 'utf8');
