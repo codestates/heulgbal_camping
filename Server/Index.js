@@ -29,7 +29,10 @@ sequelize
   });
 
 app.use(cookieParser());
-app.use('/', controllers);
+
+const CampsitesRouter = require('./Routes/Campsites');
+
+app.use('/campsites', CampsitesRouter);
 
 const HTTPS_PORT = process.env.HTTPS_PORT || 4000;
 

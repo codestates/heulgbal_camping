@@ -1,6 +1,5 @@
 const { campsite, campsite_images } = require('../../models');
 module.exports = async (req, res) => {
-  // res.send('teeeeeeeest');
   try {
     const campsiteList = await campsite.findAll({
       attributes: ['id', 'title', 'content', 'address', 'business_id'],
