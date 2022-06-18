@@ -1,0 +1,99 @@
+.mainb {
+  width: auto;
+  height: auto;
+  font-size: 3.5em;
+  border: white;
+  background-color: white;
+  text-shadow: 2px 2px 2px rgb(243, 185, 68);
+  color: rgb(198, 138, 18);
+}
+
+.isIcon {
+  margin: 1em 0em 0em 0em;
+  width: 3.5em;
+  /* margin-left: 4em; */
+}
+
+/* .serchb {
+  margin-left: 8.5em;
+  margin-right: 1.5em;
+  width: auto;
+  height: auto;
+  font-size: 3em;
+} */
+
+/* .border {
+} */
+
+.profileb {
+  width: 3em;
+  margin-left: 24em;
+  margin-right: 0em;
+}
+
+.benner {
+  margin: 2em 10em 10em 10em;
+  height: 32.4em;
+}
+
+.benner2 {
+  /* width: 50em; */
+  height: auto;
+  margin: 2em 10em 2em 10em;
+  border: 2px solid yellowgreen;
+}
+
+.serchbox {
+  border: 2px solid yellowgreen;
+  margin: 2em 10em 2em 10em;
+  width: 1em;
+}
+
+.settingbox {
+  margin: 1em 1.5em;
+  height: 4em;
+  width: 8em;
+}
+
+.settingbox2 {
+  margin-left: 1.5em;
+  height: 4em;
+  width: 14em;
+}
+
+.introduce {
+  width: 60.5em;
+  height: auto;
+  margin: 2em 0em 2em 0em;
+  border: 2px solid yellowgreen;
+}
+
+.iscamp0 {
+  text-align: left;
+
+  margin: 2em 0em 2em 9.5em;
+}
+
+.iscamp1 {
+  margin: 0em 1em 0em 0em;
+  font-size: 2.5em;
+}
+
+.iscamp2 {
+  font-size: 2.5em;
+}
+
+.iscamp3 {
+  margin: 0em 0em 0em 4.7em;
+  font-size: 2.5em;
+}
+
+/* .camplist {
+  margin-top: 0em;
+  padding-top: 2.5em;
+  height: 4em;
+  border-bottom: 2px solid yellowgreen;
+  background-color: bisque;
+} */
+
+
