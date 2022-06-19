@@ -8,14 +8,12 @@ import MyModal from '../Model/ProFileModel';
 const First = styled.div`
   left: 50%;
   right: 50%;
-  width: 110em;
+  width: 118em;
   height: auto;
   position: absolute;
-  /* background-color: white; */
   border-radius: 0.3rem;
   align-content: space-between;
   transform: translate(-50%);
-  /* border: 2px solid yellowgreen; */
 `;
 
 const Main = () => {
@@ -37,9 +35,9 @@ const Main = () => {
     window.location.href = '/mypagecamp'
   }
 
-  const handleClick5 = () => {
-    window.location.href = '/mypageout'
-  }
+  // const handleClick5 = () => {
+  //   window.location.href = '/mypageout'
+  // }
 
   return (
     <First>
@@ -58,7 +56,7 @@ const Main = () => {
     <p className='c-my-sidebar'>
     <button className='c-my-side-button' onClick={handleClick3}>회원정보</button>
     <button className='c-my-side-button' onClick={handleClick4}>캠핑장 예약 관리</button>
-    <button className='c-my-side-button' onClick={handleClick5}>회원탈퇴</button>
+    {/* <button className='c-my-side-button' onClick={handleClick5}>회원탈퇴</button> */}
     </p>
     <div className='c-my-page-input'>
       <div className='c-my-page-signout'>

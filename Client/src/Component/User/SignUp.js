@@ -1,12 +1,9 @@
-//회원가입
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import axios from 'axios'
 const isServer = 'http://localhost:4000'
-// import dummy from '../../DB/User.json'
 
-// 스타일 컴포넌트
 const Wallpaper = styled.div`
   position: absolute;
   top: 0;
@@ -31,13 +28,11 @@ const Wraper = styled.div`
 `;
 
 const TouchPoint = styled.div`
-  /* bottom: 1rem; */
   left: 50%;
   right: 50%;
   width: 26rem;
   height: auto;
   position: absolute;
-  /* z-index: 999; */
   background-color: white;
   padding: 2rem 2rem 2rem 2rem;
   border-radius: 0.3rem;
@@ -115,7 +110,6 @@ const TouchPoint = styled.div`
 
 export function Login ({ handleResponseSuccess }) {
 
-  // input 데이터 저장
   const [isUserInfo, setUserInfo] = useState({
     customer_id: '',
     password: '',
@@ -123,25 +117,24 @@ export function Login ({ handleResponseSuccess }) {
     name: '',
     phone: ''
   })
-  // business_name: null,
-  // business_address: null,
-  // business_number: null,
+
+  useEffect(() => {
+    window.localStorage.setItem('usersA', JSON.stringify(isUserInfo))
+  }, [isUserInfo])
   
-  //안내문구 ON, OFF
+
   const [isCheckCustomerId, setCheckCustomerId] = useState(false)
   const [isCheckPassword, setCheckPassword] = useState(false)
   const [isCheckPassword2, setCheckPassword2] = useState(false)
   const [isCheckEmail, setCheckEmail] = useState(false)
-  // const [isCheckTel, setCheckTel] = useState(false)
   const [inputValue, setInputValue] = useState('')
 
-  //input 값 저장 함수
+
   const handleInputValue = (e, key) => {
     setUserInfo({...isUserInfo, [key]: e.target.value})
-    // console.log(isUserInfo.phone)
   }
 
-  //input 데이터 필터링 함수들 
+
   const isFilterId = (e, key) => {
     let regUserId = /^[a-zA-Z0-9+]{5,}$/
     if ((!e.target.value || (regUserId.test(e.target.value)))) setCheckCustomerId(false)
@@ -178,7 +171,6 @@ export function Login ({ handleResponseSuccess }) {
     }
   }
 
-  //휴대전화 하이픈 자동완성
   useEffect(() => {
     if (inputValue.length === 10) {
       setInputValue(inputValue.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3'));
@@ -190,28 +182,20 @@ export function Login ({ handleResponseSuccess }) {
 
   const handleSignUp = () => {
   if (!(isUserInfo.customer_id && isUserInfo.password && isUserInfo.email && isUserInfo.name && isUserInfo.phone)) {
-    // console.log(isUserInfo.customer_id)
-    // console.log(isUserInfo.password)
-    // console.log(isUserInfo.email)
-    // console.log(isUserInfo.name)
-    // console.log(isUserInfo.phone)
     alert ("모든 정보를 입력해야 됩니다.")
   }
   else {
     axios.post(`${isServer}/user/signup`, isUserInfo
-    // {
-    //   customer_id: isUserInfo.customer_id,
-    //   password: isUserInfo.password,
-    //   email: isUserInfo.email,
-    //   name: isUserInfo.name,
-    //   phone: isUserInfo.phone
-    // }
     )
     .then(() => alert("회원가입 성공"))
     window.location.replace('/login')
     .catch(err => console.log(err))
   }
 }
+
+  const isBuisnesSsignup = () => {
+    window.location.replace('/buisnesssignup')
+  }
 
   return (
     <>
@@ -221,7 +205,7 @@ export function Login ({ handleResponseSuccess }) {
 
         <img className='title' src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbWrsX0%2FbtrEzJkKHFe%2Fvwp0KU3Gt1E4QK5quUPne1%2Fimg.png' alt=''/>
 
-          {/* ID 입력칸 */}
+
           <div className='email-req'>아이디</div>
           <input 
           type='text'
@@ -230,7 +214,7 @@ export function Login ({ handleResponseSuccess }) {
           onChange={(e) => isFilterId(e, 'customer_id')} />
           {isCheckCustomerId ? (<div className='isFalse'>아이디는 영문 숫자 조합 5자 이상 작성해야됩니다.</div>) : null}
 
-          {/* 패스워드 입력칸 */}
+
           <div className='email-req'>패스워드</div>
           <input
           type='password'
@@ -238,7 +222,7 @@ export function Login ({ handleResponseSuccess }) {
           onChange={(e) => isFilterPw(e, 'password')} />
           {isCheckPassword ? (<div className='isFalse'>숫자 영문 특수문자 조합 8자리 이상 작성해야됩니다.</div>) : null}
           
-          {/* 패스워드 재확인 입력칸 */}
+
           <div className='email-req'>PASSWORD 재확인</div>
           <input
           type='password'
@@ -246,11 +230,11 @@ export function Login ({ handleResponseSuccess }) {
           />
           {isCheckPassword2 ? (<div className='isTrue'>비밀번호가 일치합니다.</div>) : null}
 
-          {/* 실명 입력칸 */}
+
           <div className='email-req'>실명</div>
           <input onChange={(e) => handleInputValue(e, 'name')}/>
 
-          {/* 이메일 입력칸 */}
+
           <div className='email-req'>email</div>
           <input
           type='email'
@@ -258,7 +242,7 @@ export function Login ({ handleResponseSuccess }) {
           />
           {isCheckEmail ? (<div className='isFalse'>올바르지 않은 형식의 이메일입니다.</div>) : null}
 
-          {/* 휴대전화 입력칸 */}
+
           <div className='email-req'>휴대전화</div>
           <input
           type='text'
@@ -266,8 +250,9 @@ export function Login ({ handleResponseSuccess }) {
           onChange={(e) => isFilterTel(e, 'phone')}
           />
 
-          {/* 서버와 연결되야 할 가입하기 버튼 */}
-          <button className='submit' onClick={handleSignUp}>가입하기</button>
+
+          <button className='submit' onClick={handleSignUp}>확인</button>
+          <button className='submit' onClick={isBuisnesSsignup}>사업자회원가입</button>
 
           <div className='query1'>
           <span className='query'><pr>계정이 있으신가요? </pr></span>

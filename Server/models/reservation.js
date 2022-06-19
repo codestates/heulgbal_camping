@@ -22,9 +22,11 @@ module.exports = (sequelize, DataTypes) => {
       room_id: DataTypes.INTEGER,
       option_quantity: DataTypes.INTEGER,
       people_count: DataTypes.INTEGER,
+      customer_id: DataTypes.INTEGER,
+      business_number: DataTypes.STRING,
       room_approval_state: {
         type: DataTypes.STRING(8),
-        defaultValue: 'waiting',
+        defaultValue: '대기중',
       },
     },
     {

@@ -11,11 +11,9 @@ const First = styled.div`
   width: 118em;
   height: auto;
   position: absolute;
-  /* background-color: white; */
   border-radius: 0.3rem;
   align-content: space-between;
   transform: translate(-50%);
-  /* border: 2px solid yellowgreen; */
 `;
 
 const Main = () => {
@@ -37,10 +35,6 @@ const Main = () => {
     window.location.href = '/mypagecamp'
   }
 
-  const handleClick5 = () => {
-    window.location.href = '/mypageout'
-  }
-
   return (
     <First>
     <div>
@@ -58,7 +52,7 @@ const Main = () => {
     <p className='b-my-sidebar'>
     <button className='b-my-side-button' onClick={handleClick3}>회원정보</button>
     <button className='b-my-side-button' onClick={handleClick4}>캠핑장 예약관리</button>
-    <button className='b-my-side-button' onClick={handleClick5}>회원탈퇴</button>
+    {/* <button className='b-my-side-button' onClick={handleClick5}>회원탈퇴</button> */}
     </p>
     <div className='b-my-page-input'>
       <div className='b-my-camp-input-text'>

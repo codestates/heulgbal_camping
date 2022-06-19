@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon ./Server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setdb": "npx sequelize db:drop && npx sequelize db:create && npx sequelize-cli db:migrate"
+    "setdb": "npx sequelize db:drop && npx sequelize db:create && npx sequelize-cli db:migrate",
+    "setdb2": "npx sequelize-cli db:seed --seed 20220603174921-demo-users && npx sequelize-cli db:seed --seed 20220605060803-demo-campsites && npx sequelize-cli db:seed --seed 20220605060843-demo-campsite_images && npx sequelize-cli db:seed --seed 20220605060600-demo-rooms && npx sequelize-cli db:seed --seed 20220605060825-demo-room_images && npx sequelize-cli db:seed --seed 20220605060817-demo-reservations && npx sequelize-cli db:seed --seed 20220605060837-demo-options"
   },
   "repository": {
     "type": "git",

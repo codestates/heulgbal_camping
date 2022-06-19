@@ -37,6 +37,7 @@
 .b-my-page-input {
   width: 90em;
   display: inline-block;
+  border-left: 2px solid bisque;
 }
 
 .b-my-camp-input-text {
