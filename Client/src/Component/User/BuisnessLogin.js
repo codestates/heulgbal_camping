@@ -95,6 +95,18 @@ const TouchPoint = styled.div`
     text-align: center;
     cursor: pointer;
   }
+  > button.submit2 {
+    height: auto;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    background-color: gray;
+    font-weight: bold;
+    color: white;
+    border-style: hidden;
+    text-align: center;
+    cursor: pointer;
+  }
 
   > button.oauth {
     width: 10rem;
@@ -116,7 +128,7 @@ export function Login ({ handleResponseSuccess }) {
   const [loginInfo, setLoginInfo] = useState({
     customer_id: '',
     password: '',
-    type: '0'
+    type: '1'
   })
   const handleInputValue = (e, key) => {
     setLoginInfo({...loginInfo, [key]: e.target.value})
@@ -153,7 +165,7 @@ export function Login ({ handleResponseSuccess }) {
   }
 
   const handleBLogin = () => {
-    window.location.replace('/buisnesslogin')
+    window.location.replace('/login')
   }
 
   return (
@@ -162,8 +174,11 @@ export function Login ({ handleResponseSuccess }) {
       <Wraper>
         <TouchPoint>
           <img className='title' src='https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbWrsX0%2FbtrEzJkKHFe%2Fvwp0KU3Gt1E4QK5quUPne1%2Fimg.png' alt=''/>
-          <div className='email-req'>아이디</div>
-          <input 
+          <div
+          className='email-req'>사업자 번호</div>
+          <input
+          type="text"
+          maxlength='10'
           onKeyPress={(e) => {if (e.key === 'Enter') {handleLogin()}}}
           onChange={(e) => handleInputValue(e, 'customer_id')}></input>
           <div className='email-req'>패스워드</div>
@@ -172,7 +187,7 @@ export function Login ({ handleResponseSuccess }) {
           onChange={(e) => handleInputValue(e, 'password')}>
           </input>
           <button className='submit' onClick={handleLogin}>로그인</button>
-          <button className='submit' onClick={handleBLogin}>사업자 계정 로그인</button>
+          <button className='submit' onClick={handleBLogin}>일반 계정 로그인하기</button>
           <div className='query1'>
           <span className='query'><pr>회원이 아니신가요? </pr></span>
           <span>

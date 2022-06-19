@@ -11,19 +11,7 @@
 .isIcon {
   margin: 1em 0em 0em 0em;
   width: 3.5em;
-  /* margin-left: 4em; */
 }
-
-/* .serchb {
-  margin-left: 8.5em;
-  margin-right: 1.5em;
-  width: auto;
-  height: auto;
-  font-size: 3em;
-} */
-
-/* .border {
-} */
 
 .profileb {
   width: 3em;
@@ -37,7 +25,6 @@
 }
 
 .benner2 {
-  /* width: 50em; */
   height: auto;
   margin: 2em 10em 2em 10em;
   border: 2px solid yellowgreen;
@@ -87,13 +74,5 @@
   margin: 0em 0em 0em 4.7em;
   font-size: 2.5em;
 }
-
-/* .camplist {
-  margin-top: 0em;
-  padding-top: 2.5em;
-  height: 4em;
-  border-bottom: 2px solid yellowgreen;
-  background-color: bisque;
-} */
 
 

@@ -16,13 +16,13 @@ module.exports = (sequelize, DataTypes) => {
   user.init(
     {
       customer_id: DataTypes.STRING(20),
-      business_number: DataTypes.INTEGER,
+      business_number: DataTypes.STRING(15),
       password: DataTypes.STRING(20),
       email: DataTypes.STRING(50),
       name: DataTypes.STRING(5),
       business_name: DataTypes.STRING(20),
       business_address: DataTypes.STRING(50),
-      phone: DataTypes.INTEGER,
+      phone: DataTypes.STRING(15),
       type: {
         type: DataTypes.BOOLEAN,
         defaultValue: 0,

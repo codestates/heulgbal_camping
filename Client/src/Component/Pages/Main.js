@@ -10,7 +10,6 @@ const First = styled.div`
   width: 80em;
   height: auto;
   position: absolute;
-  /* background-color: white; */
   border-radius: 0.3rem;
   align-content: space-between;
   transform: translate(-50%);
@@ -26,14 +25,6 @@ const Main = () => {
   const handleClick2 = () => {
     window.location.href = "/"
   }
-
-  // const introduceClick = () => {
-  //   window.location.href = "/introduce"
-  // }
-
-  // const serchClick = () => {
-  //   window.location.href = "/serch"
-  // }
 
   return (
     <First>

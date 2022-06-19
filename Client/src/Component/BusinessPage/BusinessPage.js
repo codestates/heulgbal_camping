@@ -1,4 +1,3 @@
-//마이페이지
 import React from 'react';
 import './BusinessPage.css'
 import { useState } from 'react';
@@ -11,11 +10,9 @@ right: 50%;
 width: 118em;
 height: auto;
 position: absolute;
-/* background-color: white; */
 border-radius: 0.3rem;
 align-content: space-between;
 transform: translate(-50%);
-/* border: 2px solid yellowgreen; */
 `;
 
 const Main = () => {

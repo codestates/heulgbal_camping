@@ -1,4 +1,3 @@
-//마이페이지
 import { useState } from 'react';
 import React from 'react';
 import './MyPage.css'
@@ -11,14 +10,13 @@ const First = styled.div`
   width: 118em;
   height: auto;
   position: absolute;
-  /* background-color: white; */
   border-radius: 0.3rem;
   align-content: space-between;
   transform: translate(-50%);
-  /* border: 2px solid yellowgreen; */
 `;
 
 const Main = () => {
+  const searchLogin1 = JSON.parse(window.localStorage.getItem('usersA'))
 
   const [isOpen, setOpen] = useState(false)
   const handleClick1 = () => {
@@ -37,9 +35,9 @@ const Main = () => {
     window.location.href = '/mypagecamp'
   }
 
-  const handleClick5 = () => {
-    window.location.href = '/mypageout'
-  }
+  // const handleClick5 = () => {
+  //   window.location.href = '/mypageout'
+  // }
 
   return (
     <First>
@@ -62,24 +60,24 @@ const Main = () => {
     <p className='my-sidebar'>
     <button className='my-sidebutton' onClick={handleClick3}>회원정보</button>
     <button className='my-sidebutton' onClick={handleClick4}>캠핑장 예약관리</button>
-    <button className='my-sidebutton' onClick={handleClick5}>회원탈퇴</button>
+    {/* <button className='my-sidebutton' onClick={handleClick5}>회원탈퇴</button> */}
     </p>
     <div className='my-page-input'>
       <div className='my-input-text'>
         이름
       </div>
-      <input className='input-box'/>
+      <div className='input-box'>{searchLogin1.customer_id}</div>
       <div className='my-input-text'>
       연락처
       </div>
-      <input className='input-box'/>
+      <div className='input-box'>{searchLogin1.phone}</div>
       <div className='my-input-text'>
         이메일
       </div>
-      <input className='input-box'/>
+      <div className='input-box'>{searchLogin1.email}</div>
       <div />
-    <button className='password-button'>비밀번호 변경</button>
-    <button className='mypage-edit-button'>개인정보 수정</button>
+    <div className='password-button'></div>
+    <div className='mypage-edit-button'></div>
     </div>
       </div>
     </div>

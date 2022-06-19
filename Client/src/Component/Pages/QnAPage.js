@@ -1,9 +1,7 @@
-//qna페이지
 import React,{useState} from 'react';
 import './QnAPage.css'
 import MyModal from '../Model/ProFileModel';
 import styled from 'styled-components';
-//import { BrowserRouter,Route,Routes } from 'react-router-dom';
 
 const First = styled.div`
 left: 50%;
@@ -11,11 +9,9 @@ right: 50%;
 width: 118em;
 height: auto;
 position: absolute;
-/* background-color: white; */
 border-radius: 0.3rem;
 align-content: space-between;
 transform: translate(-50%);
-/* border: 2px solid yellowgreen; */
 `;
 
 const Main = () => {

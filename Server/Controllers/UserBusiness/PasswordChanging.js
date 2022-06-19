@@ -1,4 +1,3 @@
-// 완료
 const { user } = require('../../models');
 const { isAuthorized } = require('../TokenFunction');
 

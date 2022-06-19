@@ -1,5 +1,3 @@
-// 완료
-
 const { user } = require('../../models');
 const { isAuthorized } = require('../TokenFunction');
 
@@ -9,11 +7,11 @@ module.exports = async (req, res) => {
   if (!userInfo) {
     res.sendStatus(404);
   };
-  // 해당 유저의 계정 삭제
+
   await user.destroy({
     where: { id }
   })
-  // CLI 창에서 오류는 뜨는데, 정상적으로 삭제됨
+
   .then (() => {
     res.status(201).send('계정이 정상적으로 삭제되었습니다');
   });
