@@ -16,7 +16,7 @@ const First = styled.div`
 `;
 
 const Main = () => {
-  const searchLogin1 = JSON.parse(window.localStorage.getItem('usersA'))
+  // const searchLogin1 = JSON.parse(window.localStorage.getItem('usersA'))
 
   const [isOpen, setOpen] = useState(false)
   const handleClick1 = () => {
@@ -66,15 +66,15 @@ const Main = () => {
       <div className='my-input-text'>
         이름
       </div>
-      <div className='input-box'>{searchLogin1.customer_id}</div>
+      <div className='input-box'>데이터베이스 오류</div>
       <div className='my-input-text'>
       연락처
       </div>
-      <div className='input-box'>{searchLogin1.phone}</div>
+      <div className='input-box'>데이터베이스 오류</div>
       <div className='my-input-text'>
         이메일
       </div>
-      <div className='input-box'>{searchLogin1.email}</div>
+      <div className='input-box'>데이터베이스 오류</div>
       <div />
     <div className='password-button'></div>
     <div className='mypage-edit-button'></div>
