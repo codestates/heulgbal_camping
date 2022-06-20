@@ -118,9 +118,9 @@ export function Login ({ handleResponseSuccess }) {
     phone: ''
   })
 
-  useEffect(() => {
-    window.localStorage.setItem('usersA', JSON.stringify(isUserInfo))
-  }, [isUserInfo])
+  // useEffect(() => {
+  //   window.localStorage.setItem('usersA', JSON.stringify(isUserInfo))
+  // }, [isUserInfo])
   
 
   const [isCheckCustomerId, setCheckCustomerId] = useState(false)

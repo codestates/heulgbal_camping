@@ -136,6 +136,7 @@ export function Login ({ handleResponseSuccess }) {
       if (res.status === 200) {
         if (res.data.message === 'ok') {
           alert('로그인 성공')
+          // console.log(res.data.data)
           window.location.replace('/')
         }
         if (res.data.message === 'id or password is not authorized') {
